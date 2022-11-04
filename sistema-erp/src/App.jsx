@@ -1,16 +1,6 @@
 import "./App.css";
+import { Login } from "./pages/Login";
 
-import InsulmosPage from "./pages/insulmos/insulmos.page";
-import LoginPage from "./pages/login/login.page";
-
-const App = () => {
-  let isLogged = true;
-  return (
-    <div>
-      Tela de Inicial
-      <div>{isLogged ? <InsulmosPage /> : <LoginPage />}</div>
-    </div>
-  );
+export const App = () => {
+  return <Login />;
 };
-
-export default App;

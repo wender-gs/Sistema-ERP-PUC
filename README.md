@@ -2,13 +2,9 @@
 
 ## Descrição
 
----
-
 Sistema ERP voltado para produtores rurais, aproximando eles da facilidade de controle financeiro e de estoque de forma intuitiva e ágil.
 
 ## Funcionalidades
-
----
 
 - Interface Simples e intuitiva.
 
@@ -24,8 +20,6 @@ Sistema ERP voltado para produtores rurais, aproximando eles da facilidade de co
 
 ## Tecnologias Utilizadas
 
----
-
 - HTML
 - CSS
 - JavaScript
@@ -33,8 +27,6 @@ Sistema ERP voltado para produtores rurais, aproximando eles da facilidade de co
 - React
 
 ## Iniciando
-
----
 
 Para rodar o projeto em um servidor local execute:
 
@@ -47,8 +39,6 @@ npm run start ou yarn start # depende do gerenciador de dependencias que você u
 ```
 
 ## Colaboradores
-
----
 
 <br>
 <div style="display: flex; gap: 1rem;">

@@ -8,7 +8,7 @@
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
 import "./index.css";
-import React from 'react'
+import React from "react";
 
 export const Login = () => {
   return <span>Página de login a ser implementada</span>;

@@ -1,58 +1,54 @@
-* {
-    padding: 0px;
-    margin: 0px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-    background-color: rgba(239, 235, 235, 0.933);
-    font-family: 'Poppins'
+  background-color: rgba(239, 235, 235, 0.933);
+  font-family: "Poppins";
 }
 
 #check {
-    display: none;
+  display: none;
 }
 
 #icone {
-    cursor: pointer;
-    padding: 15px;
-    position: absolute;
-    z-index: 1;
+  cursor: pointer;
+  padding: 15px;
+  position: absolute;
+  z-index: 1;
 }
 
 .barra {
-    background-color: #fff;
-    height: 100%;
-    width: 300px;
-    position: absolute;
-    transition: all .2s linear;
-    left: -300px;
+  background-color: #fff;
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  transition: all 0.2s linear;
+  left: -300px;
 }
 
 nav {
-    width: 100%;
-    position: absolute;
-    top: 60px;
+  width: 100%;
+  position: absolute;
+  top: 60px;
 }
 
 li {
-    padding: 20px;
-    font-size: 12pt;
-    transition: all .2s linear;
-    color: #fff;
-    border-bottom: 2px;
-
+  font-size: 12pt;
+  transition: all 0.2s linear;
+  color: #fff;
+  border-bottom: 2px;
 }
 
-li:hover{
-    background-color:#93FF97;
+li:hover {
+  background-color: #93ff97;
 }
 
-#check:checked ~ .barra{
-    transform: translateX(300px);
+#check:checked ~ .barra {
+  transform: translateX(300px);
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    list-style: none;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
 }

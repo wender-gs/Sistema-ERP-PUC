@@ -55,33 +55,52 @@ export const Dashboard = () => {
         </header>
 
         {/* conteudo principal */}
-        <div className="centered">card saldo negativo</div>
-        <div className="right-side">card saldo positivo</div>
-      </div>
-
-      {/* <header>
-        <h1 className="p-3 text-uppercase">Dashboard</h1>
-        <input type="checkbox" id="check" />
-        <label id="icone" htmlFor="check"></label>
-        <div className="barra">
-          <nav>
-            <ul className="nav-menu">
-              <li>
-                <a href="/dashboard">Dashboard</a>
-              </li>
-              <li>
-                <a href="/dashboard">Financeiro</a>
-              </li>
-              <li>
-                <a href="/dashboard">Insumos</a>
-              </li>
-              <li>
-                <a href="/dashboard">Produtos</a>
-              </li>
-            </ul>
-          </nav>
+        <div className="centered">
+          <div className="dash-card">
+            <div className="dash-card-content">
+              <span className="title text-danger">saldo negativo</span>
+              <div className="bottom-content">
+                <div>
+                  <img
+                    className="bg-danger rounded"
+                    src="/images/cash-icon.svg"
+                    width={50}
+                    alt=""
+                  />
+                </div>
+                <span className="title text-danger">R$ -1.000,00</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </header> */}
+
+        <div className="right-side">
+          <div className="dash-card">
+            <div className="dash-card-content">
+              <span className="title text-success">saldo positivo</span>
+              <div className="bottom-content">
+                <div className="">
+                  <img
+                    className="bg-success rounded"
+                    src="/images/cash-icon.svg"
+                    width={50}
+                    alt=""
+                  />
+                </div>
+                <span className="title text-success">R$ 1.000,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="user-icon">
+            <img
+              className="bg-white rounded-circle"
+              src="/images/user-icon.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

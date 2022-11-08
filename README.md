@@ -38,6 +38,11 @@ npm install ou yarn install # esse comando sera utilizado somente na primeira ve
 npm run start ou yarn start # depende do gerenciador de dependencias que você usa.
 ```
 
+### Rotas disponiveis
+
+- /
+- /dashboard
+
 ## Colaboradores
 
 <br>

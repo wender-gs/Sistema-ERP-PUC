@@ -40,8 +40,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  font-family: var(--ff-primary);
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x: hidden;

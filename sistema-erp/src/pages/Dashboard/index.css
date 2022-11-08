@@ -1,8 +1,26 @@
+/*
+  importando a fonte que será usada
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/*
+  Definindo variaveis de ambiente para facilitar
+  a manutenção ou a troca de tema depois
+*/
+:root {
+  --clr-light-green: #93ff97;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+}
 
 body {
   background-color: rgba(239, 235, 235, 0.933);
   font-family: "Poppins";
+}
+
+ul {
+  padding: 0;
 }
 
 #check {
@@ -11,44 +29,87 @@ body {
 
 #icone {
   cursor: pointer;
-  padding: 15px;
-  position: absolute;
-  z-index: 1;
+  background: var(--clr-light-green) url("/public/images/menu1.svg") no-repeat
+    center;
+  transition: background 120ms steps(1) ease;
+  padding: 1.5rem;
+  margin: 0.5rem 1.5rem 0 0;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: all 256ms ease-in-out;
 }
 
 .barra {
-  background-color: #fff;
+  background-color: var(--clr-white);
   height: 100%;
-  width: 300px;
-  position: absolute;
-  transition: all 0.2s linear;
-  left: -300px;
+  width: 15rem;
+  position: fixed;
+  top: 0;
+  transition: all 0.256s linear;
+  left: -15rem;
 }
 
 nav {
   width: 100%;
   position: absolute;
-  top: 60px;
+  top: 0;
+}
+
+ul.nav-menu {
+  margin-top: 2rem;
 }
 
 li {
   font-size: 12pt;
   transition: all 0.2s linear;
-  color: #fff;
-  border-bottom: 2px;
+  color: var(--clr-white);
 }
 
 li:hover {
-  background-color: #93ff97;
+  background-color: var(--clr-light-green);
 }
 
-#check:checked ~ .barra {
-  transform: translateX(300px);
-}
-
-a {
+li a {
   display: block;
   padding: 20px;
   text-decoration: none;
-  color: black;
+  color: var(--clr-black);
+  font-weight: bold;
+}
+
+li a:hover {
+  color: var(--clr-black);
+}
+
+#check:checked ~ .barra {
+  transform: translateX(15rem);
+}
+
+#check:checked ~ #icone {
+  background-image: url("/public/images/menu2.svg");
+}
+
+#check:checked ~ #icone {
+  margin-left: 15rem;
+  transition: all 256ms ease-in-out;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  place-items: center stretch;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "l c r";
+}
+
+.left-side {
+  grid-area: l;
+}
+
+.centered {
+  grid-area: c;
+}
+
+.right-side {
+  grid-area: r;
 }

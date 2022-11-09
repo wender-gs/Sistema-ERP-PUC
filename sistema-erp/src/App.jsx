@@ -5,10 +5,22 @@ import { Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 
 export const App = () => {
+  const routes = [
+    {
+      path: "/",
+      element: <Login />,
+    },
+    {
+      path: "/dashboard",
+      element: <Dashboard />,
+    },
+  ];
+
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/dashboard" element={<Dashboard />} />
+      {routes.map((r) => (
+        <Route path={r.path} element={r.element} />
+      ))}
     </Routes>
   );
 };

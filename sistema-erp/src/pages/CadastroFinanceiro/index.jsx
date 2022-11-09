@@ -7,8 +7,36 @@
 
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
+
+import { useEffect } from "react";
+import { Sidebar } from "../../component/Sidebar";
 import "./index.css";
 
-export const CadastroReceitas = () => {
-  return <span>Página para o cadastro de receitas a ser implementada</span>;
+export const CadastroFinanceiro = () => {
+  useEffect(() => {
+    document.title = "Financeiro";
+  }, []);
+
+  return (
+    <>
+      {/* menu */}
+      <div>
+        <Sidebar />
+
+        {/* cont-principal*/}
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Compras</h5>
+                <a href="#" class="btn btn-primary"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </>
+  );
 };

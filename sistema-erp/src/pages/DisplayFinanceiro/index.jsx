@@ -9,7 +9,7 @@
 //arquivo index.css na pasta de sua respectiva página
 import "./index.css";
 
-export const DisplayReceitas = () => {
+export const Financeiro = () => {
   return (
     <span>Página para listar e exibir as despesas a ser implementada</span>
   );

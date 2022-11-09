@@ -1,0 +1,12 @@
+.btn-primary{
+    background: var(--clr-light-green)url("/public/images/icone-down.png") no-repeat
+    center;
+    border-radius: 45px;
+    width: 45px;
+    height: 45px;
+    --bs-btn-hover-bg: var(--clr-light-green);
+    --bs-btn-hover-border-color: var(--clr-light-green);
+}
+
+
+

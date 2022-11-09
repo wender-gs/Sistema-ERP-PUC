@@ -24,6 +24,10 @@ ul {
   padding: 0;
 }
 
+.bg-success {
+  background: var(--clr-light-green) !important;
+}
+
 #check {
   display: none;
 }
@@ -60,9 +64,14 @@ li:hover {
   background-color: var(--clr-light-green);
 }
 
+/* 
+  1rem = 16px
+  15.625rem = 250px
+*/
+
 li a {
   display: block;
-  padding: 20px;
+  padding: 2.5rem 1.25rem;
   text-decoration: none;
   color: var(--clr-black);
   font-weight: bold;

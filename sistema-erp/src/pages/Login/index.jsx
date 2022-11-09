@@ -9,7 +9,12 @@
 //arquivo index.css na pasta de sua respectiva página
 import "./index.css";
 import React from "react";
+import { useEffect } from "react";
 
 export const Login = () => {
+  useEffect(() => {
+    document.title = "Login";
+  }, []);
+
   return <span>Página de login a ser implementada</span>;
 };

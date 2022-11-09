@@ -5,6 +5,15 @@ nada que vá atrapalhar o desenvolvimento.
 qualquer duvida sintam-se livres para me perguntar
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --clr-light-green: #93ff97;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-light-gray: rgba(239, 235, 235, 0.933);
+}
+
 *,
 *::after,
 *::before {
@@ -43,6 +52,12 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x: hidden;
+  background-color: var(--clr-light-gray);
+  font-family: "Poppins";
+}
+
+ul {
+  padding: 0;
 }
 
 /* A elements that don't have a class get default styles */

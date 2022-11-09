@@ -1,3 +1,74 @@
 /* 
   CSS do component sidebar
 */
+.bg-success {
+  background: var(--clr-light-green) !important;
+}
+
+#check {
+  display: none;
+}
+
+#icone {
+  cursor: pointer;
+  background: var(--clr-light-green) url("/public/images/menu1.svg") no-repeat
+    center;
+  transition: background 120ms steps(1) ease;
+  padding: 1.5rem;
+  margin: 0.5rem 1.5rem 0 0;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: all 256ms ease-in-out;
+}
+
+.barra {
+  background-color: var(--clr-white);
+  height: 100%;
+  width: 15rem;
+  position: fixed;
+  top: 0;
+  transition: all 0.256s linear;
+  left: -15rem;
+}
+
+li {
+  font-size: 12pt;
+  transition: all 0.2s linear;
+  color: var(--clr-white);
+}
+
+/* 
+  1rem = 16px
+  15.625rem = 250px
+*/
+
+li a,
+li span {
+  display: block;
+  padding: 2.5rem 1.25rem;
+  text-decoration: none;
+  color: var(--clr-black);
+  font-weight: bold;
+}
+
+li span.brand:hover {
+  background: var(--clr-white) !important;
+}
+
+li a:hover {
+  color: var(--clr-black);
+  background-color: var(--clr-light-green);
+}
+
+#check:checked ~ .barra {
+  transform: translateX(15rem);
+}
+
+#check:checked ~ #icone {
+  background-image: url("/public/images/menu2.svg");
+}
+
+#check:checked ~ #icone {
+  margin-left: 15rem;
+  transition: all 256ms ease-in-out;
+}

@@ -1,3 +1,5 @@
+import "./index.css";
+
 export const Sidebar = () => {
   return (
     <>
@@ -13,9 +15,9 @@ export const Sidebar = () => {
               <nav>
                 <ul className="nav-menu">
                   <li>
-                    <a href="/dashboard" className="fs-2">
+                    <span href="/dashboard" className="fs-2 brand">
                       LOGO
-                    </a>
+                    </span>
                   </li>
                   <li className="active bg-success">
                     <a href="/dashboard">Dashboard</a>

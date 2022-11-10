@@ -26,8 +26,4 @@ h5 {
   --bs-gutter-x: 5rem;
 }
 
-.list-group-item {
-  width: 40%;
-  display: flex;
-  justify-content: center;
-}
+

@@ -33,15 +33,34 @@ export const CadastroFinanceiro = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <ul className="list-group">
-            <li className="list-group-item">A disabled item</li>
-            <li className="list-group-item">A second item</li>
-            <li className="list-group-item">A third item</li>
-            <li className="list-group-item">A fourth item</li>
-            <li className="list-group-item">And a fifth one</li>
-          </ul>
+          <div className="container-fluid flex border-dark p-3 my-3">
+            <table className="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>Menu</th>
+                  <th>Casa</th>
+                  <th>Home</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="table">
+                  <td>home</td>
+                  <td>home</td>
+                  <td>home</td>
+                </tr>
+                <tr>
+                  <td>home</td>
+                  <td>h</td>
+                  <td>h</td>
+                </tr>
+                <tr>
+                  <td>home</td>
+                  <td>h</td>
+                  <td>h</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </>

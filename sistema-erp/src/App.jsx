@@ -8,15 +8,18 @@ import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
 export const App = () => {
   const routes = [
     {
+      _id: 1,
       path: "/",
       element: <Login />,
     },
     {
+      _id: 2,
       path: "/dashboard",
       element: <Dashboard />,
     },
     {
-      path: "/CadastroFinanceiro",
+      _id: 3,
+      path: "/cadastrofinanceiro",
       element: <CadastroFinanceiro />,
     },
   ];
@@ -24,7 +27,7 @@ export const App = () => {
   return (
     <Routes>
       {routes.map((r) => (
-        <Route path={r.path} element={r.element} />
+        <Route key={r._id} path={r.path} element={r.element} />
       ))}
     </Routes>
   );

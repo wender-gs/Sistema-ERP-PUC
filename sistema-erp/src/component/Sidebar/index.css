@@ -72,3 +72,7 @@ li a:hover {
   margin-left: 15rem;
   transition: all 256ms ease-in-out;
 }
+
+.active {
+  background-color: var(--clr-light-green);
+}

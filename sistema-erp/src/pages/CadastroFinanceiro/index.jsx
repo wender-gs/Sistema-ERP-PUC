@@ -21,30 +21,29 @@ export const CadastroFinanceiro = () => {
     <>
       {/* menu */}
       <div>
-        <Sidebar />
+        <Sidebar title={"Financeiro"} />
 
         {/* cont-principal*/}
-        <div class="row">
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Compras</h5>
-                <a href="#" class="btn btn-primary"></a>
+        <div className="row">
+          <div className="col-sm-2">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title">Compras</h5>
+                <a href="#" className="btn btn-primary"></a>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <ul class="list-group">
-            <li class="list-group-item">A disabled item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
+          <ul className="list-group">
+            <li className="list-group-item">A disabled item</li>
+            <li className="list-group-item">A second item</li>
+            <li className="list-group-item">A third item</li>
+            <li className="list-group-item">A fourth item</li>
+            <li className="list-group-item">And a fifth one</li>
           </ul>
-          </div>
+        </div>
       </div>
-
     </>
   );
 };

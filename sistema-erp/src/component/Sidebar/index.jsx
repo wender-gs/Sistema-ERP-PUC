@@ -1,6 +1,8 @@
 import "./index.css";
 
-export const Sidebar = () => {
+export const Sidebar = ({ title }) => {
+  const pathname = window.location.pathname;
+
   return (
     <>
       <header>
@@ -8,8 +10,8 @@ export const Sidebar = () => {
           <div className="d-flex ms-3 align-items-center">
             <input type="checkbox" id="check" />
             <label id="icone" htmlFor="check"></label>
-            <h1 className="mt-2 ps-3 text-uppercase d-inline-block">
-              Dashboard
+            <h1 className="mt-2 ps-3 text-capitalize d-inline-block">
+              {title}
             </h1>
             <div className="barra">
               <nav>
@@ -19,11 +21,17 @@ export const Sidebar = () => {
                       LOGO
                     </span>
                   </li>
-                  <li className="active bg-success">
+                  <li
+                    className={`${pathname === "/dashboard" ? "active" : ""}`}
+                  >
                     <a href="/dashboard">Dashboard</a>
                   </li>
-                  <li>
-                    <a href="/dashboard">Financeiro</a>
+                  <li
+                    className={`${
+                      pathname === "/cadastrofinanceiro" ? "active" : ""
+                    }`}
+                  >
+                    <a href="/cadastrofinanceiro">Financeiro</a>
                   </li>
                   <li>
                     <a href="/dashboard">Insumos</a>
@@ -36,7 +44,6 @@ export const Sidebar = () => {
             </div>
           </div>
         </div>
-        
       </header>
     </>
   );

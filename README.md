@@ -42,6 +42,7 @@ npm run start ou yarn start # depende do gerenciador de dependencias que você u
 
 - /
 - /dashboard
+- /cadastrofinanceiro
 
 ## Colaboradores
 

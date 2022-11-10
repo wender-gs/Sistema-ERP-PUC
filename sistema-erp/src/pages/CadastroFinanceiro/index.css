@@ -4,8 +4,34 @@
     border-radius: 45px;
     width: 45px;
     height: 45px;
+    margin-left: 70%;
+    margin-top: -40px;
     --bs-btn-hover-bg: var(--clr-light-green);
+    --bs-btn-border-color: #ffffff;
     --bs-btn-hover-border-color: var(--clr-light-green);
+}
+
+.card-title{
+    margin-top: 5px;
+}
+h5{
+    font-size: 1.5rem;
+    height: 15px;
+}
+
+.row {
+    justify-content: center;
+    margin-left: -30%;
+    margin-top: 70px;
+    --bs-gutter-x: 5rem;
+    
+}
+
+.list-group-item{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
 }
 
 

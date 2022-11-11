@@ -1,3 +1,21 @@
+h5 {
+  font-size: 1.5rem;
+  height: 15px;
+}
+
+table {
+  border-collapse: separate;
+  background: #ffffff;
+  text-align: left;
+  padding: 1rem;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0.5rem 2rem;
+}
+
 .btn-primary {
   background: var(--clr-light-green) url("/public/images/icone-down.png")
     no-repeat center;
@@ -14,16 +32,12 @@
 .card-title {
   margin-top: 5px;
 }
-h5 {
-  font-size: 1.5rem;
-  height: 15px;
+
+.grid-item:nth-child(1) {
+  grid-column: 1 / span 3;
 }
 
-.row {
-  justify-content: center;
-  margin-left: -30%;
-  margin-top: 70px;
-  --bs-gutter-x: 5rem;
+.grid-item:nth-child(2) {
+  grid-column: 5 / span 7;
+  grid-row: 2;
 }
-
-

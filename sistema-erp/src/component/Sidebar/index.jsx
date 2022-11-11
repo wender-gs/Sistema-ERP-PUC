@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 
-export const Sidebar = ({ title }) => {
+export const Sidebar = ({ title, display }) => {
   const pathname = window.location.pathname;
 
   return (
@@ -9,29 +10,31 @@ export const Sidebar = ({ title }) => {
         <div className="left-side">
           <div className="d-flex ms-3 align-items-center">
             <input type="checkbox" id="check" />
-            <label id="icone" htmlFor="check"></label>
+            <label
+              id="icone"
+              htmlFor="check"
+              className={`${display && "ml"}`}
+            ></label>
             <h1 className="mt-2 ps-3 text-capitalize d-inline-block">
               {title}
             </h1>
-            <div className="barra">
+            <div className={`barra ${display && "block"}`}>
               <nav>
                 <ul className="nav-menu">
                   <li>
-                    <span href="/dashboard" className="fs-2 brand">
-                      LOGO
-                    </span>
+                    <span className="fs-2 brand">LOGO</span>
                   </li>
                   <li
                     className={`${pathname === "/dashboard" ? "active" : ""}`}
                   >
-                    <a href="/dashboard">Dashboard</a>
+                    <Link to="/dashboard">Dashboard</Link>
                   </li>
                   <li
                     className={`${
                       pathname === "/cadastrofinanceiro" ? "active" : ""
                     }`}
                   >
-                    <a href="/cadastrofinanceiro">Financeiro</a>
+                    <Link to="/cadastrofinanceiro">Financeiro</Link>
                   </li>
                   <li>
                     <a href="/dashboard">Insumos</a>

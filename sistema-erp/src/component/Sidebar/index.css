@@ -60,6 +60,14 @@ li a:hover {
   background-color: var(--clr-light-green);
 }
 
+.block {
+  transform: translateX(15rem);
+}
+
+.ml {
+  margin-left: 15rem !important;
+}
+
 #check:checked ~ .barra {
   transform: translateX(15rem);
 }

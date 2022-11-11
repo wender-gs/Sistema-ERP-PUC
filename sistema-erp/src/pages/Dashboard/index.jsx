@@ -7,6 +7,7 @@
 
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
+
 import { useEffect } from "react";
 import { Sidebar } from "../../component/Sidebar";
 import "./index.css";

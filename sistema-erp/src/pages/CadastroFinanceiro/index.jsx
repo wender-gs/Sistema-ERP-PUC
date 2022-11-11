@@ -10,6 +10,8 @@
 
 import { useEffect } from "react";
 import { Sidebar } from "../../component/Sidebar";
+import { Content } from "../../component/Content";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 export const CadastroFinanceiro = () => {
@@ -21,47 +23,48 @@ export const CadastroFinanceiro = () => {
     <>
       {/* menu */}
       <div>
-        <Sidebar title={"Financeiro"} />
+        <Sidebar title={"Financeiro"} display={true} />
 
         {/* cont-principal*/}
-        <div className="row">
-          <div className="col-sm-2">
+        <Content>
+          <div className="grid-item">
             <div className="card">
               <div className="card-body">
                 <h5 className="card-title">Compras</h5>
-                <a href="#" className="btn btn-primary"></a>
+                <Link to="#" className="btn btn-primary"></Link>
               </div>
             </div>
           </div>
-          <div className="container-fluid flex border-dark p-3 my-3">
-            <table className="table table-striped table-hover">
+          <div className="grid-item">
+            <p className="fw-bold fs-5 text-center mb-5">Lista de Compras</p>
+            <table>
               <thead>
                 <tr>
-                  <th>Menu</th>
-                  <th>Casa</th>
-                  <th>Home</th>
+                  <th>N</th>
+                  <th>Nome</th>
+                  <th>Quant</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="table">
-                  <td>home</td>
-                  <td>home</td>
-                  <td>home</td>
+                <tr>
+                  <td>1</td>
+                  <td>Pneu de trator</td>
+                  <td>25 unid</td>
                 </tr>
                 <tr>
-                  <td>home</td>
-                  <td>h</td>
-                  <td>h</td>
+                  <td>2</td>
+                  <td>Luva</td>
+                  <td>25 unid</td>
                 </tr>
                 <tr>
-                  <td>home</td>
-                  <td>h</td>
-                  <td>h</td>
+                  <td>3</td>
+                  <td>Mangueira</td>
+                  <td>100 metros</td>
                 </tr>
               </tbody>
             </table>
           </div>
-        </div>
+        </Content>
       </div>
     </>
   );

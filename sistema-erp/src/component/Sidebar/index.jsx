@@ -39,8 +39,12 @@ export const Sidebar = ({ title, display }) => {
                   <li>
                     <a href="/dashboard">Insumos</a>
                   </li>
-                  <li>
-                    <a href="/dashboard">Produtos</a>
+                  <li
+                  className={`${
+                      pathname === "/displayProdutos" ? "active" : ""
+                    }`}
+                  >
+                    <Link to="/displayProdutos">Produtos</Link>
                   </li>
                 </ul>
               </nav>

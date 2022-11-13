@@ -7,10 +7,10 @@
 
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
+import "./index.css";
 import { useEffect } from "react";
 import { Content } from "../../component/Content";
 import { Sidebar } from "../../component/Sidebar";
-import "./index.css";
 
 export const DisplayProdutos = () => {
   useEffect(() => {

@@ -8,7 +8,24 @@
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
 import "./index.css";
+import { useEffect } from "react";
+import { Content } from "../../component/Content";
+import { Sidebar } from "../../component/Sidebar";
 
 export const DisplayInsumos = () => {
-  return <span>Página para exibir e listar os insumos a ser implementada</span>;
+  useEffect(() => {
+    document.title = "Insumos";
+  }, []);
+  return (
+    <>
+      {/* menu */}
+      <div>
+        <Sidebar title={"Insumos"} display={true} />
+        {/* cont-principal*/}
+        <Content>
+          
+          </Content>
+          </div>
+          </>
+  );
 };

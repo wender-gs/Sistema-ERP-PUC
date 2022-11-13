@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
+import { DisplayInsumos } from "./pages/DispalayInsumos";
 
 export const App = () => {
   const routes = [
@@ -27,6 +28,11 @@ export const App = () => {
       _id: 4,
       path: "/DisplayProdutos",
       element: <DisplayProdutos />,
+    },
+    {
+      _id: 5,
+      path: "/DisplayInsumos",
+      element: <DisplayInsumos />,
     },
   ];
 

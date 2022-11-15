@@ -26,7 +26,7 @@ export const DisplayInsumos = () => {
         <Content>
         <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Insumos</p>
-          <table className="grid-item">
+          <table>
             <thead>
               <tr>
                 <th>N</th>

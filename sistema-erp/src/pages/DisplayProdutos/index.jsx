@@ -25,7 +25,7 @@ export const DisplayProdutos = () => {
         {/* cont-principal*/}
         <Content>
         <div className="grid-item">
-            <p className="fw-bold fs-5 text-center mb-5">Produtos</p>
+            <p className="fw-bold fs-5 text-center mb-5">Lista de Produtos</p>
             <table>
               <thead>
                 <tr>

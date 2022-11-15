@@ -3,7 +3,7 @@ import { Login } from "./pages/Login";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
-import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
+import { DisplayFinanceiro } from "./pages/DisplayFinanceiro";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
 import { DisplayInsumos } from "./pages/DispalayInsumos";
 
@@ -21,8 +21,8 @@ export const App = () => {
     },
     {
       _id: 3,
-      path: "/cadastrofinanceiro",
-      element: <CadastroFinanceiro />,
+      path: "/DisplayFinanceiro",
+      element: <DisplayFinanceiro />,
     },
     {
       _id: 4,

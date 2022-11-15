@@ -21,11 +21,35 @@ export const DisplayInsumos = () => {
       {/* menu */}
       <div>
         <Sidebar title={"Insumos"} display={true} />
+
         {/* cont-principal*/}
         <Content>
-          
-          </Content>
+        <div className="grid-item">
+            <p className="fw-bold fs-5 text-center mb-5">Lista de Insumos</p>
+          <table className="grid-item">
+            <thead>
+              <tr>
+                <th>N</th>
+                <th>Nome</th>
+                <th>Quant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Semente de tomate</td>
+                <td>20.000 kg</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Semente de feijão</td>
+                <td>25.000 kg</td>
+              </tr>
+            </tbody>
+          </table>
           </div>
-          </>
+        </Content>
+      </div>
+    </>
   );
 };

@@ -31,10 +31,10 @@ export const Sidebar = ({ title, display }) => {
                   </li>
                   <li
                     className={`${
-                      pathname === "/cadastrofinanceiro" ? "active" : ""
+                      pathname === "/DisplayFinanceiro" ? "active" : ""
                     }`}
                   >
-                    <Link to="/cadastrofinanceiro">Financeiro</Link>
+                    <Link to="/DisplayFinanceiro">Financeiro</Link>
                   </li>
                   <li
                   className={`${

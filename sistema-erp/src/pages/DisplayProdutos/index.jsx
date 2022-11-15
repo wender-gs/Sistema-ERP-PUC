@@ -24,6 +24,7 @@ export const DisplayProdutos = () => {
         <Sidebar title={"Produtos"} display={true} />
         {/* cont-principal*/}
         <Content>
+          <span></span>
         <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Produtos</p>
             <table>
@@ -62,6 +63,7 @@ export const DisplayProdutos = () => {
                 </tr>
               </tbody>
             </table>
+            
           </div>
           </Content>
       </div>

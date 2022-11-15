@@ -24,6 +24,7 @@ export const DisplayInsumos = () => {
 
         {/* cont-principal*/}
         <Content>
+        <span></span>
         <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Insumos</p>
           <table>

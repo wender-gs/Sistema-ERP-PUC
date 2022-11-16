@@ -21,7 +21,7 @@ export const Dashboard = () => {
     <>
       {/* container grid */}
       <div className="grid mt-4">
-        <Sidebar title={"Dashboard"} />
+        <Sidebar title={"Dashboard"} page="dash" />
 
         {/* conteudo principal */}
         <div className="centered">

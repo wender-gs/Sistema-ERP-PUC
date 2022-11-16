@@ -6,6 +6,8 @@ import { Dashboard } from "./pages/Dashboard";
 import { DisplayFinanceiro } from "./pages/DisplayFinanceiro";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
 import { DisplayInsumos } from "./pages/DispalayInsumos";
+import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
+import { CadastroProdutos } from "./pages/CadastroProdutos";
 
 export const App = () => {
   const routes = [
@@ -21,18 +23,28 @@ export const App = () => {
     },
     {
       _id: 3,
-      path: "/DisplayFinanceiro",
+      path: "/displayfinanceiro",
       element: <DisplayFinanceiro />,
     },
     {
       _id: 4,
-      path: "/DisplayProdutos",
+      path: "/displayprodutos",
       element: <DisplayProdutos />,
     },
     {
       _id: 5,
-      path: "/DisplayInsumos",
+      path: "/displayinsumos",
       element: <DisplayInsumos />,
+    },
+    {
+      _id: 6,
+      path: "/financeiro/cadastro",
+      element: <CadastroFinanceiro />,
+    },
+    {
+      _id: 7,
+      path: "/produtos/cadastro",
+      element: <CadastroProdutos />,
     },
   ];
 

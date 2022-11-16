@@ -1,20 +1,31 @@
-// TODO: Criar página de dashboard, responsaveis pela tarefa será definido.
-
-// Vamos tentar manter um padrão de código, limpo e objetivo, como não usaremos TS,
-// faço necessário o uso de comentarios, breves e objetivos explicando o que o trecho
-// do código faz, trazendo assim a facilidade de entendimento por outros desenvolvedores
-// que venham a participar do código.
-
-// toda regra de estilo devera ser escrita no
-//arquivo index.css na pasta de sua respectiva página
-
 import { useEffect } from "react";
 import { Sidebar } from "../../component/Sidebar";
 import { Content } from "../../component/Content";
 import { Link } from "react-router-dom";
 import "./index.css";
+import { Table } from "../../component/Table";
 
 export const DisplayFinanceiro = () => {
+  const tableHeaders = ["N", "Nome", "Quant"]; // constante com os valores de cabeçalho da tabela
+  const tableValues = [
+    {
+      n: 1,
+      nome: "Pneu de Trator",
+      quant: 25,
+    },
+    {
+      n: 2,
+      nome: "Luva",
+      quant: 25,
+    },
+    {
+      n: 3,
+      nome: "Mangueira",
+      quant: "100 metros",
+    },
+  ]; // constante com os valores da tabela futuramente isso vai vir do banco de dados
+  // então vai ficar mais organizado do que esta agora
+
   useEffect(() => {
     document.title = "Financeiro";
   }, []);
@@ -29,40 +40,19 @@ export const DisplayFinanceiro = () => {
         <Content>
           <div className="grid-item">
             <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Compras</h5>
+              <div className="card-body d-flex align-items-center justify-content-between">
+                <h5 className="card-title me-4">Compras</h5>
                 <Link to="#" className="btn btn-primary"></Link>
               </div>
             </div>
+
+            <Link to="/financeiro/cadastro" className="new">
+              <img src="/images/plus.svg" alt="" />
+            </Link>
           </div>
           <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Compras</p>
-            <table>
-              <thead>
-                <tr>
-                  <th>N</th>
-                  <th>Nome</th>
-                  <th>Quant</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Pneu de trator</td>
-                  <td>25 unid</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Luva</td>
-                  <td>25 unid</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Mangueira</td>
-                  <td>100 metros</td>
-                </tr>
-              </tbody>
-            </table>
+            <Table dataHeader={tableHeaders} dataValues={tableValues} />
           </div>
         </Content>
       </div>

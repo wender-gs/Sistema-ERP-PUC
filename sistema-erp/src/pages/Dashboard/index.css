@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  place-items: center legacy;
+  /* place-items: center legacy; */
   grid-auto-columns: 1fr;
   grid-template-areas: "l c r";
 }

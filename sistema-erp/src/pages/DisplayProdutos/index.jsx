@@ -1,18 +1,40 @@
-// TODO: Criar página de dashboard, responsaveis pela tarefa será definido.
-
-// Vamos tentar manter um padrão de código, limpo e objetivo, como não usaremos TS,
-// faço necessário o uso de comentarios, breves e objetivos explicando o que o trecho
-// do código faz, trazendo assim a facilidade de entendimento por outros desenvolvedores
-// que venham a participar do código.
-
-// toda regra de estilo devera ser escrita no
-//arquivo index.css na pasta de sua respectiva página
 import "./index.css";
 import { useEffect } from "react";
 import { Content } from "../../component/Content";
 import { Sidebar } from "../../component/Sidebar";
+import { Table } from "../../component/Table";
+import { Link } from "react-router-dom";
 
 export const DisplayProdutos = () => {
+  const tableHeaders = ["N", "Nome", "Quant"];
+  const dataValues = [
+    {
+      n: 1,
+      nome: "Arroz",
+      quant: "200.000 Kg",
+    },
+    {
+      n: 2,
+      nome: "Feijão",
+      quant: "100.000 Kg",
+    },
+    {
+      n: 3,
+      nome: "Tomate",
+      quant: "150.000 Kg",
+    },
+    {
+      n: 4,
+      nome: "Alface",
+      quant: "180.000 Kg",
+    },
+    {
+      n: 5,
+      nome: "Couve",
+      quant: "910.000 Kg",
+    },
+  ];
+
   useEffect(() => {
     document.title = "Produtos";
   }, []);
@@ -24,51 +46,19 @@ export const DisplayProdutos = () => {
         <Sidebar title={"Produtos"} display={true} />
         {/* cont-principal*/}
         <Content>
-          <span></span>
-        <div className="grid-item">
-            <p className="fw-bold fs-5 text-center mb-5">Lista de Produtos</p>
-            <table>
-              <thead>
-                <tr>
-                  <th>N</th>
-                  <th>Nome</th>
-                  <th>Quant</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Arroz</td>
-                  <td>200.000 kg</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Feijão</td>
-                  <td>100.000 kg</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Tomate</td>
-                  <td>150.000 kg </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Alface</td>
-                  <td>180.000 kg</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Couve</td>
-                  <td>910.000 kg</td>
-                </tr>
-              </tbody>
-            </table>
-            
+          <div className="grid-item">
+            <div className="d-flex align-items-center justify-content-end w-100">
+              <Link to="/produtos/cadastro" className="new">
+                <img src="/images/plus.svg" alt="" />
+              </Link>
+            </div>
           </div>
-          </Content>
+          <div className="grid-item">
+            <p className="fw-bold fs-5 text-center mb-5">Lista de Produtos</p>
+            <Table dataHeader={tableHeaders} dataValues={dataValues} />
+          </div>
+        </Content>
       </div>
-      </>
-        
-        
-);
+    </>
+  );
 };

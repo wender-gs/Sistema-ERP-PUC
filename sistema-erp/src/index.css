@@ -11,7 +11,8 @@ qualquer duvida sintam-se livres para me perguntar
   --clr-light-green: #93ff97;
   --clr-white: #ffffff;
   --clr-black: #000000;
-  --clr-light-gray: rgba(239, 235, 235, 0.933);
+  --clr-light-gray: #efebebee;
+  --clr-dark-gray: #cccccc;
 }
 
 *,

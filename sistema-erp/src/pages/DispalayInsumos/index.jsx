@@ -1,18 +1,24 @@
-// TODO: Criar página de dashboard, responsaveis pela tarefa será definido.
-
-// Vamos tentar manter um padrão de código, limpo e objetivo, como não usaremos TS,
-// faço necessário o uso de comentarios, breves e objetivos explicando o que o trecho
-// do código faz, trazendo assim a facilidade de entendimento por outros desenvolvedores
-// que venham a participar do código.
-
-// toda regra de estilo devera ser escrita no
-//arquivo index.css na pasta de sua respectiva página
-import "./index.css";
 import { useEffect } from "react";
 import { Content } from "../../component/Content";
 import { Sidebar } from "../../component/Sidebar";
+import { Table } from "../../component/Table";
+import "./index.css";
 
 export const DisplayInsumos = () => {
+  const tableHeaders = ["N", "Nome", "Quant"]; // constante com os valores de cabeçalho da tabela
+  const dataValues = [
+    {
+      n: 1,
+      nome: "Semente de tomate",
+      quant: "20.000 Kg",
+    },
+    {
+      n: 2,
+      nome: "Semente de feijão",
+      quant: "25.000 Kg",
+    },
+  ];
+
   useEffect(() => {
     document.title = "Insumos";
   }, []);
@@ -24,30 +30,10 @@ export const DisplayInsumos = () => {
 
         {/* cont-principal*/}
         <Content>
-        <span></span>
-        <div className="grid-item">
+          <span></span>
+          <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Insumos</p>
-          <table>
-            <thead>
-              <tr>
-                <th>N</th>
-                <th>Nome</th>
-                <th>Quant</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Semente de tomate</td>
-                <td>20.000 kg</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Semente de feijão</td>
-                <td>25.000 kg</td>
-              </tr>
-            </tbody>
-          </table>
+            <Table dataHeader={tableHeaders} dataValues={dataValues} />
           </div>
         </Content>
       </div>

@@ -12,6 +12,25 @@ import { Sidebar } from "../../component/Sidebar";
 import "./index.css";
 
 export const Dashboard = () => {
+  const baseDados = [
+    {
+      name: "Despesas do Mês",
+      value: "-10.000,00",
+    },
+    {
+      name: "Faturamento do Mês",
+      value: "+10.000,00",
+    },
+    {
+      name: "Número de Produtos Cadastrados:",
+      value: "30",
+    },
+    {
+      name: "Número de Insumos Cadastrados:",
+      value: "4",
+    },
+  ];
+
   useEffect(() => {
     document.title = "Dashboard";
   }, []);
@@ -69,6 +88,21 @@ export const Dashboard = () => {
           </div>
         </div>
       </div>
+      <div className="grid-items">
+        <div className="d-flex">
+          {baseDados.map((d) => {
+            return (
+              <div className="dash-card  w-100 p-5 m-5  text-center">
+                <span>{d.name}</span>
+                <div className="mt-5">
+                  <span>{d.value}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className="right-side dash-card"> Novo Campo</div>;
     </>
   );
 };

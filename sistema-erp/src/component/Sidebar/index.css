@@ -9,6 +9,10 @@
   display: none;
 }
 
+.ml-3 {
+  margin-left: 3rem;
+}
+
 #icone {
   cursor: pointer;
   background: var(--clr-light-green) url("/public/images/menu1.svg") no-repeat

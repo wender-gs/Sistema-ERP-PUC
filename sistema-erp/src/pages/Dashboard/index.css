@@ -5,6 +5,10 @@
   grid-template-areas: "l c r";
 }
 
+.grid-items {
+  width: 40rem;
+}
+
 .left-side {
   grid-area: l;
 }

@@ -79,3 +79,25 @@ textarea,
 select {
   font: inherit;
 }
+
+/* Classes Global */
+
+.mt-10 {
+  margin-top: 10rem;
+}
+.mt-15 {
+  margin-top: 15rem;
+}
+.mt-20 {
+  margin-top: 20rem;
+}
+.mt-25 {
+  margin-top: 25rem;
+}
+.mt-30 {
+  margin-top: 30rem;
+}
+
+.p-10 {
+  padding-left: 40rem;
+}

@@ -4,13 +4,14 @@ export const Sidebar = () => {
   return (
     <>
       <header>
-        <div className="left-side">
-          <div className="d-flex ms-3 align-items-center">
+        <div className=" ml-3 left-side">
+          <div className=" d-flex ms-3 align-items-center">
             <input type="checkbox" id="check" />
             <label id="icone" htmlFor="check"></label>
             <h1 className="mt-2 ps-3 text-uppercase d-inline-block">
               Dashboard
             </h1>
+
             <div className="barra">
               <nav>
                 <ul className="nav-menu">

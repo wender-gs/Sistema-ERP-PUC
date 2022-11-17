@@ -30,6 +30,10 @@ export const DisplayFinanceiro = () => {
     document.title = "Financeiro";
   }, []);
 
+  function showDrop(id) {
+    document.querySelector(`#${id}`).classList.toggle("d-none");
+  }
+
   return (
     <>
       {/* menu */}
@@ -42,8 +46,18 @@ export const DisplayFinanceiro = () => {
             <div className="card">
               <div className="card-body d-flex align-items-center justify-content-between">
                 <h5 className="card-title me-4">Compras</h5>
-                <Link to="#" className="btn btn-primary"></Link>
+                <Link
+                  onClick={() => {
+                    showDrop("drop");
+                  }}
+                  to="#"
+                  className="btn-primary"
+                ></Link>
               </div>
+            </div>
+
+            <div id="drop" className="drop-despesa d-none">
+              <p>Despesa</p>
             </div>
 
             <Link to="/financeiro/cadastro" className="new">

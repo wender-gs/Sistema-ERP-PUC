@@ -51,7 +51,8 @@ li span {
   font-weight: bold;
 }
 
-li span.brand:hover {
+li.brand a:hover,
+li a span:hover {
   background: var(--clr-white) !important;
 }
 

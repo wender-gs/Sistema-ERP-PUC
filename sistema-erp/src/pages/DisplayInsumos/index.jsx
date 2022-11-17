@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Content } from "../../component/Content";
 import { Sidebar } from "../../component/Sidebar";
 import { Table } from "../../component/Table";
@@ -30,8 +31,14 @@ export const DisplayInsumos = () => {
 
         {/* cont-principal*/}
         <Content>
-          <span></span>
           <div className="grid-item">
+          <div className="d-flex align-items-center justify-content-end w-100">
+              <Link to="/insumos/cadastro" className="new">
+                <img src="/images/plus.svg" alt="" />
+              </Link>
+            </div>
+            </div>
+            <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Insumos</p>
             <Table dataHeader={tableHeaders} dataValues={dataValues} />
           </div>

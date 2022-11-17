@@ -5,9 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { DisplayFinanceiro } from "./pages/DisplayFinanceiro";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
-import { DisplayInsumos } from "./pages/DispalayInsumos";
+import { DisplayInsumos } from "./pages/DisplayInsumos";
 import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
+import { CadastroInsumos } from "./pages/CadastroInsumos";
 
 export const App = () => {
   const routes = [
@@ -45,6 +46,11 @@ export const App = () => {
       _id: 7,
       path: "/produtos/cadastro",
       element: <CadastroProdutos />,
+    },
+    {
+      _id: 8,
+      path: "/insumos/cadastro",
+      element: <CadastroInsumos />,
     },
   ];
 

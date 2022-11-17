@@ -65,11 +65,15 @@ export const Sidebar = ({ title, display, page }) => {
                 </li>
                 <li
                   className={`${
-                    pathname === "/displayinsumos" ? "active" : ""
+                    pathname === "/displayinsumos" ||
+                    pathname === "/insumos/cadastro"
+                      ? "active"
+                      : ""
                   }`}
                 >
                   <Link to="/displayinsumos">Insumos</Link>
                 </li>
+                
               </ul>
             </nav>
           </div>

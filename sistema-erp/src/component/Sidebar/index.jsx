@@ -12,7 +12,7 @@ export const Sidebar = ({ title, display, page }) => {
           <label
             id="icone"
             htmlFor="check"
-            className={`${display && "ml mt-4"}`}
+            className={`${display && "d-none"}`}
           ></label>
           <h1
             className={`${
@@ -37,8 +37,10 @@ export const Sidebar = ({ title, display, page }) => {
           <div className={`barra ${display && "block"}`}>
             <nav>
               <ul className="nav-menu">
-                <li>
-                  <span className="fs-2 brand">LOGO</span>
+                <li className="brand">
+                  <Link to="/dashboard">
+                    <span className="fs-2">LOGO</span>
+                  </Link>
                 </li>
                 <li className={`${pathname === "/dashboard" ? "active" : ""}`}>
                   <Link to="/dashboard">Dashboard</Link>

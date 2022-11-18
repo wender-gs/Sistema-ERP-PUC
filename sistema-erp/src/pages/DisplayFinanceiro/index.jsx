@@ -58,6 +58,10 @@ export const DisplayFinanceiro = () => {
 
             <div id="drop" className="drop-despesa d-none">
               <p>Despesa</p>
+              <button className="bnt-primary"></button>
+              <Link to="/despesas/cadastro" className="new">
+                
+              </Link>
             </div>
 
             <Link to="/financeiro/cadastro" className="new">

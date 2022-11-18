@@ -6,9 +6,12 @@ import { Dashboard } from "./pages/Dashboard";
 import { DisplayFinanceiro } from "./pages/DisplayFinanceiro";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
 import { DisplayInsumos } from "./pages/DisplayInsumos";
+
 import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
 import { CadastroInsumos } from "./pages/CadastroInsumos";
+
+
 
 export const App = () => {
   const routes = [

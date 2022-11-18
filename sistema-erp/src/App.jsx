@@ -6,10 +6,11 @@ import { Dashboard } from "./pages/Dashboard";
 import { DisplayFinanceiro } from "./pages/DisplayFinanceiro";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
 import { DisplayInsumos } from "./pages/DisplayInsumos";
-
+import { DisplayDespesas} from "./pages/DisplayDespesas";
 import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
 import { CadastroInsumos } from "./pages/CadastroInsumos";
+import { CadastroDespesas } from "./pages/CadastroDespesas";
 
 
 
@@ -42,18 +43,28 @@ export const App = () => {
     },
     {
       _id: 6,
+      path: "/displaydespesas",
+      element: <DisplayDespesas />,
+    },
+    {
+      _id: 7,
       path: "/financeiro/cadastro",
       element: <CadastroFinanceiro />,
     },
     {
-      _id: 7,
+      _id: 8,
       path: "/produtos/cadastro",
       element: <CadastroProdutos />,
     },
     {
-      _id: 8,
+      _id: 9,
       path: "/insumos/cadastro",
       element: <CadastroInsumos />,
+    },
+    {
+      _id: 10,
+      path: "/despesas/cadastro",
+      element: <CadastroDespesas />,
     },
   ];
 

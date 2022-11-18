@@ -7,8 +7,30 @@
 
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
+import { Link } from "react-router-dom";
+import { Content } from "../../component/Content";
+import { FormCadastro } from "../../component/Form";
+import { Sidebar } from "../../component/Sidebar";
 import "./index.css";
 
 export const CadastroDespesas = () => {
-  return <span>Página para o cadastro de despesas a ser implementada</span>;
+  return (
+    <>
+      <Sidebar title={"Despesas"} display={true} />
+
+      <Content>
+        <div className="grid-item">
+          <div className="d-flex align-items-center justify-content-end w-100">
+            <Link to="/displaydespesas" className="new bg-success">
+              <img src="/images/menu2.svg" alt="" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid-item">
+          <FormCadastro title={"Cadastrar uma despesa"} />
+        </div>
+      </Content>
+    </>
+  );
 };

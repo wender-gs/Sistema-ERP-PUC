@@ -56,14 +56,11 @@ export const DisplayFinanceiro = () => {
               </div>
             </div>
 
-            <div id="drop" className="drop-despesa d-none">
+            <div id="drop" className="drop-despesa d-none justify-content-between">
               <p>Despesa</p>
-              <button className="bnt-primary"></button>
-              <Link to="/despesas/cadastro" className="new">
-                
+              <Link to="/displaydespesas" className="btn-primary">
               </Link>
             </div>
-
             <Link to="/financeiro/cadastro" className="new">
               <img src="/images/plus.svg" alt="" />
             </Link>

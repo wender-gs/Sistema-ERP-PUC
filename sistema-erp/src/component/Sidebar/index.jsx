@@ -75,6 +75,18 @@ export const Sidebar = ({ title, display, page }) => {
                 >
                   <Link to="/displayinsumos">Insumos</Link>
                 </li>
+                <li
+                  className={`${
+                    pathname === "/displaydespesas" ||
+                    pathname === "/despesas/cadastro"
+                      ? "none"
+                      : ""
+                  }`}
+                >
+                  <Link to="/displaydespesas"></Link>
+                </li>
+                
+
                 
               </ul>
             </nav>

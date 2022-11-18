@@ -8,9 +8,63 @@
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
 import "./index.css";
+import { useEffect } from "react";
+import { Content } from "../../component/Content";
+import { Sidebar } from "../../component/Sidebar";
+import { Table } from "../../component/Table";
+import { Link } from "react-router-dom";
 
 export const DisplayDespesas = () => {
+  const tableHeaders = ["N", "Nome", "Quant"];
+  const dataValues = [
+    {
+      n: 1,
+      nome: "Diesel",
+      quant: "10.000 L",
+    },
+    {
+      n: 2,
+      nome: "Água",
+      quant: "15.000 L",
+    },
+    {
+      n: 3,
+      nome: "Fertilizante",
+      quant: "1.500 L",
+    },
+    {
+      n: 4,
+      nome: "Cimento",
+      quant: "1.000 Kg",
+    },
+ 
+  ];
+
+  useEffect(() => {
+    document.title = "Despesas";
+  }, []);
+
   return (
-    <span>Página para listar e exibir as despesas a ser implementada</span>
+    <>
+      {/* menu */}
+      <div>
+        <Sidebar title={"Despesas"} display={true} />
+        {/* cont-principal*/}
+        <Content>
+          <div className="grid-item">
+            <div className="d-flex align-items-center justify-content-end w-100">
+              <Link to="/despesas/cadastro" className="new">
+                <img src="/images/plus.svg" alt="" />
+              </Link>
+            </div>
+          </div>
+          <div className="grid-item">
+            <p className="fw-bold fs-5 text-center mb-5">Lista de Despesas</p>
+            <Table dataHeader={tableHeaders} dataValues={dataValues} />
+          </div>
+        </Content>
+      </div>
+    </>
   );
 };
+

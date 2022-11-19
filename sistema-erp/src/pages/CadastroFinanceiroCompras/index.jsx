@@ -13,23 +13,18 @@ import { FormCadastro } from "../../component/Form";
 import { Sidebar } from "../../component/Sidebar";
 import "./index.css";
 
-export const CadastroFinanceiro = () => {
+export const CadastroFinanceiroCompras = () => {
   return (
     <>
-      <Sidebar title={"Financeiro"} display={true} />
+      <Sidebar title={"Financeiro/Compras"} display={true} />
 
       <Content>
         <div className="grid-item">
-          <div className="card">
-            <div className="card-body d-flex align-items-center justify-content-between">
-              <h5 className="card-title me-4">Compras</h5>
-              <Link to="#" className="btn btn-primary"></Link>
-            </div>
+          <div className="d-flex align-items-center justify-content-end w-100">
+            <Link to="/displayfinanceirocompras" className="new bg-success">
+              <img src="/images/menu2.svg" alt="" />
+            </Link>
           </div>
-
-          <Link to="/displayfinanceiro" className="new bg-success">
-            <img src="/images/menu2.svg" alt="" />
-          </Link>
         </div>
 
         <div className="grid-item">

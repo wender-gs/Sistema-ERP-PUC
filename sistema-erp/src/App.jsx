@@ -3,16 +3,14 @@ import { Login } from "./pages/Login";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
-import { DisplayFinanceiro } from "./pages/DisplayFinanceiro";
+import { DisplayFinanceiroCompras } from "./pages/DisplayFinanceiroCompras";
 import { DisplayProdutos } from "./pages/DisplayProdutos";
 import { DisplayInsumos } from "./pages/DisplayInsumos";
-import { DisplayDespesas} from "./pages/DisplayDespesas";
-import { CadastroFinanceiro } from "./pages/CadastroFinanceiro";
+import { DisplayFinanceiroDespesas } from "./pages/DisplayFinanceiroDespesas";
+import { CadastroFinanceiroCompras } from "./pages/CadastroFinanceiroCompras";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
 import { CadastroInsumos } from "./pages/CadastroInsumos";
-import { CadastroDespesas } from "./pages/CadastroDespesas";
-
-
+import { CadastroFinanceiroDespesas } from "./pages/CadastroFinanceiroDespesas";
 
 export const App = () => {
   const routes = [
@@ -28,8 +26,8 @@ export const App = () => {
     },
     {
       _id: 3,
-      path: "/displayfinanceiro",
-      element: <DisplayFinanceiro />,
+      path: "/displayfinanceirocompras",
+      element: <DisplayFinanceiroCompras />,
     },
     {
       _id: 4,
@@ -43,13 +41,13 @@ export const App = () => {
     },
     {
       _id: 6,
-      path: "/displaydespesas",
-      element: <DisplayDespesas />,
+      path: "/displayfinanceirodespesas",
+      element: <DisplayFinanceiroDespesas />,
     },
     {
       _id: 7,
-      path: "/financeiro/cadastro",
-      element: <CadastroFinanceiro />,
+      path: "/financeiro/compras/cadastro",
+      element: <CadastroFinanceiroCompras />,
     },
     {
       _id: 8,
@@ -63,8 +61,8 @@ export const App = () => {
     },
     {
       _id: 10,
-      path: "/despesas/cadastro",
-      element: <CadastroDespesas />,
+      path: "/financeiro/despesas/cadastro",
+      element: <CadastroFinanceiroDespesas />,
     },
   ];
 

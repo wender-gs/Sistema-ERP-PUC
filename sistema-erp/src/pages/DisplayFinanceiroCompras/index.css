@@ -39,18 +39,21 @@ h5 {
   grid-row: 2;
 }
 
+.drop-despesa:hover {
+  color: black;
+  background: var(--clr-light-green);
+}
+
 .drop-despesa {
-  display: flex;
-  align-items: center;
   position: fixed;
   left: 18rem;
-  top: 14rem;
+  text-decoration: none;
+  top: 13rem;
+  color: black;
   width: 13.5rem;
   height: 3.7rem;
   background: var(--clr-white);
-  padding: 1rem 1rem;
+  padding: 1rem 4.5rem;
   border-radius: 0.3rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
-
-

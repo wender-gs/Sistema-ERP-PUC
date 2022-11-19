@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import { Table } from "../../component/Table";
 
-export const DisplayFinanceiro = () => {
+export const DisplayFinanceiroCompras = () => {
   const tableHeaders = ["N", "Nome", "Quant"]; // constante com os valores de cabeçalho da tabela
   const tableValues = [
     {
@@ -27,7 +27,7 @@ export const DisplayFinanceiro = () => {
   // então vai ficar mais organizado do que esta agora
 
   useEffect(() => {
-    document.title = "Financeiro";
+    document.title = "Financeiro/Compras";
   }, []);
 
   function showDrop(id) {
@@ -38,12 +38,12 @@ export const DisplayFinanceiro = () => {
     <>
       {/* menu */}
       <div>
-        <Sidebar title={"Financeiro"} display={true} />
+        <Sidebar title={"Financeiro/Compras"} display={true} />
 
         {/* cont-principal*/}
         <Content>
           <div className="grid-item">
-            <div className="card">
+            <div className="card ">
               <div className="card-body d-flex align-items-center justify-content-between">
                 <h5 className="card-title me-4">Compras</h5>
                 <Link
@@ -56,12 +56,15 @@ export const DisplayFinanceiro = () => {
               </div>
             </div>
 
-            <div id="drop" className="drop-despesa d-none justify-content-between">
-              <p>Despesa</p>
-              <Link to="/displaydespesas" className="btn-primary">
-              </Link>
-            </div>
-            <Link to="/financeiro/cadastro" className="new">
+            <Link
+              id="drop"
+              className="d-none drop-despesa"
+              to="/displayfinanceirodespesas"
+            >
+              <div>Despesas</div>
+            </Link>
+
+            <Link to="/financeiro/compras/cadastro" className="new">
               <img src="/images/plus.svg" alt="" />
             </Link>
           </div>

@@ -13,15 +13,15 @@ import { FormCadastro } from "../../component/Form";
 import { Sidebar } from "../../component/Sidebar";
 import "./index.css";
 
-export const CadastroDespesas = () => {
+export const CadastroFinanceiroDespesas = () => {
   return (
     <>
-      <Sidebar title={"Despesas"} display={true} />
+      <Sidebar title={"Financeiro/Despesas"} display={true} />
 
       <Content>
         <div className="grid-item">
           <div className="d-flex align-items-center justify-content-end w-100">
-            <Link to="/displaydespesas" className="new bg-success">
+            <Link to="/displayfinanceirodespesas" className="new bg-success">
               <img src="/images/menu2.svg" alt="" />
             </Link>
           </div>

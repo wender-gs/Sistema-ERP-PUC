@@ -47,13 +47,15 @@ export const Sidebar = ({ title, display, page }) => {
                 </li>
                 <li
                   className={`${
-                    pathname === "/displayfinanceiro" ||
-                    pathname === "/financeiro/cadastro"
+                    pathname === "/displayfinanceirocompras" ||
+                    pathname === "/financeiro/compras/cadastro" ||
+                    pathname === "/displayfinanceirodespesas" ||
+                    pathname === "/financeiro/despesas/cadastro"
                       ? "active"
                       : ""
                   }`}
                 >
-                  <Link to="/displayfinanceiro">Financeiro</Link>
+                  <Link to="/displayfinanceirocompras">Financeiro</Link>
                 </li>
                 <li
                   className={`${
@@ -77,17 +79,14 @@ export const Sidebar = ({ title, display, page }) => {
                 </li>
                 <li
                   className={`${
-                    pathname === "/displaydespesas" ||
-                    pathname === "/despesas/cadastro"
+                    pathname === "/displayfinanceirodespesas" ||
+                    pathname === "/financeiro/despesas/cadastro"
                       ? "none"
                       : ""
                   }`}
                 >
-                  <Link to="/displaydespesas"></Link>
+                  <Link to="/displayfinanceirodespesas"></Link>
                 </li>
-                
-
-                
               </ul>
             </nav>
           </div>

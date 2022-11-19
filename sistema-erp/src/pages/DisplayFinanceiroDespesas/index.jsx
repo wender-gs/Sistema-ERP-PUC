@@ -14,7 +14,7 @@ import { Sidebar } from "../../component/Sidebar";
 import { Table } from "../../component/Table";
 import { Link } from "react-router-dom";
 
-export const DisplayDespesas = () => {
+export const DisplayFinanceiroDespesas = () => {
   const tableHeaders = ["N", "Nome", "Quant"];
   const dataValues = [
     {
@@ -37,26 +37,47 @@ export const DisplayDespesas = () => {
       nome: "Cimento",
       quant: "1.000 Kg",
     },
- 
   ];
 
+  function showDrop(id) {
+    document.querySelector(`#${id}`).classList.toggle("d-none");
+  }
+
   useEffect(() => {
-    document.title = "Despesas";
+    document.title = "Financeiro/Despesas";
   }, []);
 
   return (
     <>
       {/* menu */}
       <div>
-        <Sidebar title={"Despesas"} display={true} />
+        <Sidebar title={"Financeiro/Despesas"} display={true} />
         {/* cont-principal*/}
         <Content>
           <div className="grid-item">
-            <div className="d-flex align-items-center justify-content-end w-100">
-              <Link to="/despesas/cadastro" className="new">
-                <img src="/images/plus.svg" alt="" />
-              </Link>
+            <div className="card ">
+              <div className="card-body d-flex align-items-center justify-content-between">
+                <h5 className="card-title me-4">Despesas</h5>
+                <Link
+                  onClick={() => {
+                    showDrop("drop");
+                  }}
+                  to="#"
+                  className="btn-primary"
+                ></Link>
+              </div>
             </div>
+
+            <Link
+              id="drop"
+              className="d-none drop-despesa"
+              to="/displayfinanceirocompras"
+            >
+              <div>Compras</div>
+            </Link>
+            <Link to="/financeiro/despesas/cadastro" className="new">
+              <img src="/images/plus.svg" alt="" />
+            </Link>
           </div>
           <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Despesas</p>
@@ -67,4 +88,3 @@ export const DisplayDespesas = () => {
     </>
   );
 };
-

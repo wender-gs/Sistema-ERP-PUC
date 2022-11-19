@@ -1,0 +1,59 @@
+h5 {
+  font-size: 1.5rem;
+  height: 15px;
+}
+
+.card {
+  min-width: fit-content;
+  max-width: 15rem;
+}
+
+.btn-primary {
+  background: var(--clr-light-green) url("/public/images/icone-down.png")
+    no-repeat center;
+  border-radius: 45px;
+  padding: 1.3rem;
+  --bs-btn-hover-bg: var(--clr-light-green);
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-hover-border-color: var(--clr-light-green);
+}
+
+.grid-item:nth-child(1) {
+  grid-column: 1 / span 11;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid-item:nth-child(1) a.new {
+  border: none;
+  background: var(--clr-white);
+  color: var(--clr-black);
+  border-radius: 50%;
+  padding: 1.2rem;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.grid-item:nth-child(2) {
+  grid-column: 5 / span 7;
+  grid-row: 2;
+}
+
+.drop-despesa:hover {
+  color: black;
+  background: var(--clr-light-green);
+}
+
+.drop-despesa {
+  position: fixed;
+  left: 18rem;
+  text-decoration: none;
+  top: 13rem;
+  color: black;
+  width: 13.5rem;
+  height: 3.7rem;
+  background: var(--clr-white);
+  padding: 1rem 4.5rem;
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}

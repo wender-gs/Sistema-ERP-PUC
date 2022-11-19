@@ -8,6 +8,7 @@
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
 
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { Sidebar } from "../../component/Sidebar";
 import "./index.css";
@@ -17,11 +18,14 @@ export const Dashboard = () => {
     document.title = "Dashboard";
   }, []);
 
+  const [displaySidebar, setdisplaySidebar] = useState(Boolean);
+
   return (
     <>
       {/* container grid */}
       <div className="grid mt-4">
-        <Sidebar title={"Dashboard"} page="dash" />
+        <Sidebar title={"Dashboard"} page="dash" display={false} />
+        {displaySidebar === false && <div>Mostre me para a direira</div>}
 
         {/* conteudo principal */}
         <div className="centered">

@@ -8,25 +8,46 @@
 // toda regra de estilo devera ser escrita no
 //arquivo index.css na pasta de sua respectiva página
 
-import React, { useState } from "react";
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
+import PlantationErp from "../../img/img-erp.jpg";
 import { Sidebar } from "../../component/Sidebar";
+import { DisplayContext } from "../../contexts/DisplayContext";
 import "./index.css";
 
 export const Dashboard = () => {
+  const { displayTrueorFalse, setdisplayTrueorFalse } =
+    useContext(DisplayContext);
+
+  const baseDados = [
+    {
+      name: "Despesas do Mês",
+      value: "-10.000,00",
+    },
+    {
+      name: "Faturamento do Mês",
+      value: "+10.000,00",
+    },
+    {
+      name: "Número de Produtos Cadastrados:",
+      value: "30",
+    },
+    {
+      name: "Número de Insumos Cadastrados:",
+      value: "4",
+    },
+  ];
+
   useEffect(() => {
     document.title = "Dashboard";
   }, []);
 
-  const [displaySidebar, setdisplaySidebar] = useState(Boolean);
+  const pathname = window.location.pathname;
 
   return (
     <>
       {/* container grid */}
       <div className="grid mt-4">
         <Sidebar title={"Dashboard"} page="dash" display={false} />
-        {displaySidebar === false && <div>Mostre me para a direira</div>}
-
         {/* conteudo principal */}
         <div className="centered">
           <div className="dash-card">
@@ -74,6 +95,33 @@ export const Dashboard = () => {
           </div>
         </div>
       </div>
+      {
+        <div className="d-flex">
+          <div
+            className={`${displayTrueorFalse === true ? "margin-left-13" : ""}`}
+          >
+            <div className="grid-items  ">
+              {baseDados.map((d) => {
+                return (
+                  <div className="dash-card-items p-5 m-5  text-center">
+                    <span>{d.name}</span>
+                    <div className="mt-5">
+                      <span>{d.value}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div
+            className={`${
+              displayTrueorFalse === true ? "dash-card-extended mt-5 " : "mt-5"
+            }`}
+          >
+            <img className="imagem " src={PlantationErp} />
+          </div>
+        </div>
+      }
     </>
   );
 };

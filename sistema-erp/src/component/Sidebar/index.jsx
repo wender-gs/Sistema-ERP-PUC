@@ -1,14 +1,27 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DisplayContext } from "../../contexts/DisplayContext";
 import "./index.css";
 
 export const Sidebar = ({ title, display, page }) => {
+  const { displayTrueorFalse, setdisplayTrueorFalse } =
+    useContext(DisplayContext);
+
   const pathname = window.location.pathname;
 
   return (
     <>
       <header>
         <div className="d-flex ms-3 align-items-center">
-          <input type="checkbox" id="check" />
+          <input
+            type="checkbox"
+            id="check"
+            onClick={() =>
+              displayTrueorFalse == false
+                ? setdisplayTrueorFalse(true)
+                : setdisplayTrueorFalse(false)
+            }
+          />
           <label
             id="icone"
             htmlFor="check"
@@ -37,13 +50,20 @@ export const Sidebar = ({ title, display, page }) => {
           <div className={`barra ${display && "block"}`}>
             <nav>
               <ul className="nav-menu">
-                <li className="brand">
-                  <Link to="/dashboard">
-                    <span className="fs-2">LOGO</span>
-                  </Link>
+                <li className="logo">
+                  <span className="fs-2">LOGO </span>
                 </li>
                 <li className={`${pathname === "/dashboard" ? "active" : ""}`}>
-                  <Link to="/dashboard">Dashboard</Link>
+                  <Link
+                    to="/dashboard"
+                    onClick={() =>
+                      displayTrueorFalse == false
+                        ? setdisplayTrueorFalse(true)
+                        : setdisplayTrueorFalse(false)
+                    }
+                  >
+                    Dashboard
+                  </Link>
                 </li>
                 <li
                   className={`${

@@ -5,8 +5,32 @@
   grid-template-areas: "l c r";
 }
 
+.grid-items {
+  display: grid;
+  /* place-items: center legacy; */
+
+  grid-auto-columns: 1fr;
+  grid-template-areas: "p q";
+}
 .left-side {
   grid-area: l;
+}
+
+.left-side-items {
+  grid-area: p;
+}
+
+.margin-left-13 {
+  margin-left: 13rem;
+}
+
+.imagem {
+  display: fixed;
+  width: 34.5rem;
+  height: 31.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: var(--clr-white);
 }
 
 .centered {
@@ -17,6 +41,10 @@
   grid-area: r;
 }
 
+.right-side-items {
+  grid-area: q;
+}
+
 .centered,
 .right-side {
   display: flex;
@@ -24,12 +52,33 @@
   align-items: center;
 }
 
+.logo {
+  display: fixed;
+  height: 8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.dash-card-extended {
+  width: 40rem;
+  height: 31.5rem;
+  border-radius: 1rem;
+}
+
 .dash-card {
+  background-color: var(--clr-white);
+  border-radius: 1rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dash-card-items {
   background-color: var(--clr-white);
   max-width: 20rem;
   border-radius: 1rem;
   padding: 1rem 0.5rem 0.5rem 0.5rem;
-  box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);
 }
 
 .dash-card-content {

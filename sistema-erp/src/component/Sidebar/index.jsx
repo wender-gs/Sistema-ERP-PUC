@@ -17,7 +17,7 @@ export const Sidebar = ({ title, display, page }) => {
             type="checkbox"
             id="check"
             onClick={() =>
-              displayTrueorFalse == false
+              displayTrueorFalse === false
                 ? setdisplayTrueorFalse(true)
                 : setdisplayTrueorFalse(false)
             }
@@ -57,8 +57,8 @@ export const Sidebar = ({ title, display, page }) => {
                   <Link
                     to="/dashboard"
                     onClick={() =>
-                      displayTrueorFalse == false
-                        ? setdisplayTrueorFalse(true)
+                      displayTrueorFalse === true
+                        ? setdisplayTrueorFalse(false)
                         : setdisplayTrueorFalse(false)
                     }
                   >

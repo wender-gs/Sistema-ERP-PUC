@@ -5,7 +5,7 @@ h5 {
 
 .card {
   min-width: fit-content;
-  max-width: 15rem;
+  max-width: 10rem;
 }
 
 .btn-primary {
@@ -50,7 +50,7 @@ h5 {
   text-decoration: none;
   top: 13rem;
   color: black;
-  width: 13.5rem;
+  width: 13.65rem;
   height: 3.7rem;
   background: var(--clr-white);
   padding: 1rem 4.5rem;

@@ -45,7 +45,7 @@ export const DisplayFinanceiroCompras = () => {
           <div className="grid-item">
             <div className="card ">
               <div className="card-body d-flex align-items-center justify-content-between">
-                <h5 className="card-title me-4">Compras</h5>
+                <h5 className="card-title me-4 pe-1">Compras</h5>
                 <Link
                   onClick={() => {
                     showDrop("drop");

@@ -18,25 +18,6 @@ export const Dashboard = () => {
   const { displayTrueorFalse, setdisplayTrueorFalse } =
     useContext(DisplayContext);
 
-  const baseDados = [
-    {
-      name: "Despesas do Mês",
-      value: "-10.000,00",
-    },
-    {
-      name: "Faturamento do Mês",
-      value: "+10.000,00",
-    },
-    {
-      name: "Número de Produtos Cadastrados:",
-      value: "30",
-    },
-    {
-      name: "Número de Insumos Cadastrados:",
-      value: "4",
-    },
-  ];
-
   useEffect(() => {
     document.title = "Dashboard";
   }, []);
@@ -101,16 +82,30 @@ export const Dashboard = () => {
             className={`${displayTrueorFalse === true ? "margin-left-13" : ""}`}
           >
             <div className="grid-items  ">
-              {baseDados.map((d) => {
-                return (
-                  <div className="dash-card-items p-5 m-5  text-center">
-                    <span>{d.name}</span>
-                    <div className="mt-5">
-                      <span>{d.value}</span>
-                    </div>
-                  </div>
-                );
-              })}
+              <div className="dash-card-items p-5 m-5  text-center">
+                <span>Despesas do Mês:</span>
+                <div className="mt-5">
+                  <span className="text-danger">- 10.000,00</span>
+                </div>
+              </div>
+              <div className="dash-card-items p-5 m-5  text-center">
+                <span>Faturamento do Mês:</span>
+                <div className="mt-5">
+                  <span className="text-success">- 10.000,00</span>
+                </div>
+              </div>
+              <div className="dash-card-items p-5 m-5  text-center">
+                <span>N de Produtos Cadastrados:</span>
+                <div className="mt-5">
+                  <span>30</span>
+                </div>
+              </div>
+              <div className="dash-card-items p-5 m-5  text-center">
+                <span>N de Insumos Cadastrados:</span>
+                <div className="mt-5">
+                  <span>4</span>
+                </div>
+              </div>
             </div>
           </div>
           <div

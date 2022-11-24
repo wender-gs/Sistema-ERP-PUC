@@ -61,7 +61,7 @@
 }
 
 .dash-card-extended {
-  width: 40rem;
+  width: 31.5rem;
   height: 31.5rem;
   border-radius: 1rem;
 }
@@ -75,7 +75,7 @@
 
 .dash-card-items {
   background-color: var(--clr-white);
-  max-width: 20rem;
+  width: 20rem;
   border-radius: 1rem;
   padding: 1rem 0.5rem 0.5rem 0.5rem;
   box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.25);

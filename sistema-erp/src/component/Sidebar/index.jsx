@@ -53,7 +53,12 @@ export const Sidebar = ({ title, display, page }) => {
                 <li className="logo">
                   <span className="fs-2">LOGO </span>
                 </li>
-                <li className={`${pathname === "/dashboard" ? "active" : ""}`}>
+
+                <li
+                  className={`${
+                    pathname === "/dashboard" ? "active disabled_link" : ""
+                  }`}
+                >
                   <Link
                     to="/dashboard"
                     onClick={() =>
@@ -65,13 +70,14 @@ export const Sidebar = ({ title, display, page }) => {
                     Dashboard
                   </Link>
                 </li>
+
                 <li
                   className={`${
                     pathname === "/displayfinanceirocompras" ||
                     pathname === "/financeiro/compras/cadastro" ||
                     pathname === "/displayfinanceirodespesas" ||
                     pathname === "/financeiro/despesas/cadastro"
-                      ? "active"
+                      ? "active disabled_link"
                       : ""
                   }`}
                 >
@@ -81,7 +87,7 @@ export const Sidebar = ({ title, display, page }) => {
                   className={`${
                     pathname === "/displayprodutos" ||
                     pathname === "/produtos/cadastro"
-                      ? "active"
+                      ? "active disabled_link"
                       : ""
                   }`}
                 >
@@ -91,7 +97,7 @@ export const Sidebar = ({ title, display, page }) => {
                   className={`${
                     pathname === "/displayinsumos" ||
                     pathname === "/insumos/cadastro"
-                      ? "active"
+                      ? "active disabled_link"
                       : ""
                   }`}
                 >

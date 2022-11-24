@@ -21,6 +21,10 @@
   transition: all 256ms ease-in-out;
 }
 
+.disabled_link {
+  pointer-events: none;
+}
+
 .barra {
   background-color: var(--clr-white);
   height: 100%;

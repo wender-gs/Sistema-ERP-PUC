@@ -3,12 +3,22 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { FormLogin } from "../../component/FormLogin";
 import { Link } from "react-router-dom";
+import { cadastrar } from "../../services/cadastrar"
+
+
 
 export const Login = () => {
   const [formLogin, setFormLogin] = useState(false);
   useEffect(() => {
     document.title = "Login";
   }, []);
+
+
+  export const FormLogin = () => {
+    const [ nome, setNome ] = useState("");
+    const [ email, setEmail ] = useState("");
+    const [ senha, setSenha ] = useState("");
+  }
 
   return (
     <div className="d-flex">
@@ -65,7 +75,10 @@ export const Login = () => {
             <input type="text" name="senha" id="senha" placeholder="Senha" />
 
             <Link to={"/dashboard"}>
-              <button type="submit">CADASTRAR</button>
+              <button onClick={() => {
+              cadastrar(nome, email, senha)
+            }}
+             type="submit">CADASTRAR</button>
             </Link>
           </form>
         </div>

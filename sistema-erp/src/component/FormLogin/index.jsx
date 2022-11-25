@@ -1,6 +1,7 @@
 import "./index.css";
 import { Link } from "react-router-dom";
 
+
 export const FormLogin = () => {
   return (
     <>
@@ -24,7 +25,8 @@ export const FormLogin = () => {
           />
           <div className="mt-3">
             <Link to={"/dashboard"}>
-              <button className="btn-register">Login</button>
+              <button 
+              className="btn-register">Login</button>
             </Link>
           </div>
         </form>

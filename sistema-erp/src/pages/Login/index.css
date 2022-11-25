@@ -1,5 +1,97 @@
-.centralizar-conteudo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
+body {
+  background-color: #fff;
+}
+
+.left-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 22rem;
+  background: #6ff18b;
+}
+
+.left-item .btn-login {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 4.5rem;
+  border-radius: 3rem;
+}
+
+.left-item .btn-login:hover {
+  background: #fff;
+  color: #6ff18b;
+  transition: all 256ms ease-in;
+}
+
+.right-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 23rem;
+  width: 100%;
+}
+
+.right-item .content div:nth-child(1) p {
+  color: #6ff18b;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  padding: 2rem 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input {
+  border: none;
+  height: 3.4rem;
+  width: 78%;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.form input:nth-child(1) {
+  background: #f1f1f1 url("/public/images/username.svg") no-repeat left center;
+  background-position-x: 15px;
+  margin-top: 2rem;
+}
+.form input:nth-child(2) {
+  background: #f1f1f1 url("/public/images/Email\ Icon.svg") no-repeat left
+    center;
+  background-position-x: 15px;
+  margin-top: 2rem;
+}
+.form input:nth-child(3) {
+  background: #f1f1f1 url("/public/images/Lock\ Icon.svg") no-repeat left center;
+  background-position-x: 15px;
+  margin-top: 2rem;
+}
+
+.form button {
+  background: #6ff18b;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 4.5rem;
+  border-radius: 3rem;
+  margin-top: 2rem;
+}
+
+.form button:hover {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 200ms ease-in-out;
+}

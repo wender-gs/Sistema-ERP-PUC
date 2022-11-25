@@ -1,5 +1,3 @@
-import React, { useContext } from "react";
-import { DisplayContext } from "./contexts/DisplayContext";
 import "./App.css";
 import { Login } from "./pages/Login";
 import { Routes, Route } from "react-router-dom";
@@ -12,11 +10,8 @@ import { CadastroFinanceiroCompras } from "./pages/CadastroFinanceiroCompras";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
 import { CadastroInsumos } from "./pages/CadastroInsumos";
 import { CadastroFinanceiroDespesas } from "./pages/CadastroFinanceiroDespesas";
-import { NovoUsuario } from "./pages/NovoUsuario";
 
 export const App = () => {
-  const valor = useContext(DisplayContext);
-  console.log("Aquiiii Context", valor);
   const routes = [
     {
       _id: 1,
@@ -67,11 +62,6 @@ export const App = () => {
       _id: 10,
       path: "/financeiro/despesas/cadastro",
       element: <CadastroFinanceiroDespesas />,
-    },
-    {
-      _id: 11,
-      path: "/NovoUsuario",
-      element: <NovoUsuario />,
     },
   ];
 

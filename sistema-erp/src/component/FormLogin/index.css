@@ -1,11 +1,38 @@
+form#login input {
+  background: #f1f1f1;
+  border: none;
+  height: 3.4rem;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+form#login input:focus {
+  outline: none;
+}
+
+form#login input:nth-child(1) {
+  background: #f1f1f1 url("/public/images/username.svg") no-repeat left center;
+  background-position-x: 15px;
+  margin-top: 2rem;
+}
+form#login input:nth-child(2) {
+  background: #f1f1f1 url("/public/images/Lock\ Icon.svg") no-repeat left center;
+  background-position-x: 15px;
+  margin-top: 2rem;
+}
+
 .btn-register {
-  text-align: center;
+  background: none;
+  border-radius: 2rem;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 0.5rem 3rem;
+  margin-top: 1rem;
 }
 
-.btn-register button {
-  background: #6ff18b;
-}
-
-.btn-register button:hover {
-  background: #6ff18b;
+.btn-register:hover {
+  background: #fff;
+  color: #6ff18b;
+  transition: all 230ms ease-in-out;
 }

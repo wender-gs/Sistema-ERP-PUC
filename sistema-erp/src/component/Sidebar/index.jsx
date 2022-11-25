@@ -1,31 +1,27 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { DisplayContext } from "../../contexts/DisplayContext";
 import "./index.css";
 
-export const Sidebar = ({ title, display, page }) => {
-  const { displayTrueorFalse, setdisplayTrueorFalse } =
-    useContext(DisplayContext);
-
+export const Sidebar = ({
+  title,
+  display,
+  page,
+  setdisplayTrueorFalse,
+  displayTrueorFalse,
+}) => {
   const pathname = window.location.pathname;
 
   return (
     <>
       <header>
         <div className="d-flex ms-3 align-items-center">
-          <input
-            type="checkbox"
-            id="check"
-            onClick={() =>
-              displayTrueorFalse === false
-                ? setdisplayTrueorFalse(true)
-                : setdisplayTrueorFalse(false)
-            }
-          />
+          <input type="checkbox" id="check" />
           <label
             id="icone"
             htmlFor="check"
             className={`${display && "d-none"}`}
+            onClick={() => {
+              setdisplayTrueorFalse(!displayTrueorFalse);
+            }}
           ></label>
           <h1
             className={`${
@@ -103,15 +99,8 @@ export const Sidebar = ({ title, display, page }) => {
                 >
                   <Link to="/displayinsumos">Insumos</Link>
                 </li>
-                <li
-                  className={`${
-                    pathname === "/displayfinanceirodespesas" ||
-                    pathname === "/financeiro/despesas/cadastro"
-                      ? "none"
-                      : ""
-                  }`}
-                >
-                  <Link to="/displayfinanceirodespesas"></Link>
+                <li>
+                  <Link to="/">Sair</Link>
                 </li>
               </ul>
             </nav>

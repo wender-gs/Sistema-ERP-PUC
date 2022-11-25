@@ -1,34 +1,26 @@
-// TODO: Criar página de dashboard, responsaveis pela tarefa WENDER, ANNA E VICTOR.
-
-// Vamos tentar manter um padrão de código, limpo e objetivo, como não usaremos TS,
-// faço necessário o uso de comentarios, breves e objetivos explicando o que o trecho
-// do código faz, trazendo assim a facilidade de entendimento por outros desenvolvedores
-// que venham a participar do código.
-
-// toda regra de estilo devera ser escrita no
-//arquivo index.css na pasta de sua respectiva página
-
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PlantationErp from "../../img/img-erp.jpg";
 import { Sidebar } from "../../component/Sidebar";
-import { DisplayContext } from "../../contexts/DisplayContext";
 import "./index.css";
 
 export const Dashboard = () => {
-  const { displayTrueorFalse, setdisplayTrueorFalse } =
-    useContext(DisplayContext);
+  const [displayTrueorFalse, setdisplayTrueorFalse] = useState(false);
 
   useEffect(() => {
     document.title = "Dashboard";
   }, []);
 
-  const pathname = window.location.pathname;
-
   return (
     <>
       {/* container grid */}
       <div className="grid mt-4">
-        <Sidebar title={"Dashboard"} page="dash" display={false} />
+        <Sidebar
+          title={"Dashboard"}
+          page="dash"
+          display={false}
+          setdisplayTrueorFalse={setdisplayTrueorFalse}
+          displayTrueorFalse={displayTrueorFalse}
+        />
         {/* conteudo principal */}
         <div className="centered">
           <div className="dash-card">
@@ -79,7 +71,9 @@ export const Dashboard = () => {
       {
         <div className="d-flex">
           <div
-            className={`${displayTrueorFalse === true ? "margin-left-13" : ""}`}
+            className={`${
+              displayTrueorFalse && "margin-left-13"
+            } default-transition`}
           >
             <div className="grid-items  ">
               <div className="dash-card-items p-5 m-5  text-center">
@@ -113,7 +107,7 @@ export const Dashboard = () => {
               displayTrueorFalse === true ? "dash-card-extended mt-5 " : "mt-5"
             }`}
           >
-            <img className="imagem " src={PlantationErp} />
+            <img className="imagem " src={PlantationErp} alt="" />
           </div>
         </div>
       }

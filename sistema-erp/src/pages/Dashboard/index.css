@@ -22,6 +22,11 @@
 
 .margin-left-13 {
   margin-left: 13rem;
+  transition: all 256ms ease-in-out;
+}
+
+.default-transition {
+  transition: all 256ms ease-in-out;
 }
 
 .imagem {

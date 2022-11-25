@@ -1,24 +1,17 @@
 import "./index.css";
 import React from "react";
 import { useEffect, useState } from "react";
-import { FormLogin } from "../../component/FormLogin";
-import { Link } from "react-router-dom";
-import { cadastrar } from "../../services/cadastrar"
-
-
+import { cadastrar } from "../../services/cadastrar";
 
 export const Login = () => {
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const [formLogin, setFormLogin] = useState(false);
+
   useEffect(() => {
     document.title = "Login";
   }, []);
-
-
-  export const FormLogin = () => {
-    const [ nome, setNome ] = useState("");
-    const [ email, setEmail ] = useState("");
-    const [ senha, setSenha ] = useState("");
-  }
 
   return (
     <div className="d-flex">
@@ -27,7 +20,7 @@ export const Login = () => {
           <p className="fw-bold fs-3 text-white">LOGO</p>
         </div>
         {formLogin ? (
-          <FormLogin />
+          <formLogin />
         ) : (
           <>
             <div className="mt-5 w-50">
@@ -70,16 +63,45 @@ export const Login = () => {
             </p>
           </div>
           <form className="form" action="">
-            <input type="text" name="nome" id="nome" placeholder="Nome" />
-            <input type="text" name="email" id="email" placeholder="E-mail" />
-            <input type="password" name="senha" id="senha" placeholder="Senha" />
+            <input
+              type="text"
+              value={nome}
+              onChange={(event) => {
+                setNome(event.target.value);
+              }}
+              name="nome"
+              id="nome"
+              placeholder="Nome"
+            />
+            <input
+              type="text"
+              value={email}
+              onChange={(event) => {
+                setEmail(event.target.value);
+              }}
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <input
+              type="password"
+              value={senha}
+              onChange={(event) => {
+                setSenha(event.target.value);
+              }}
+              name="senha"
+              id="senha"
+              placeholder="Senha"
+            />
 
-            <Link to={"/dashboard"}>
-              <button onClick={() => {
-              cadastrar(nome, email, senha)
-            }}
-             type="submit">CADASTRAR</button>
-            </Link>
+            <button
+              onClick={() => {
+                cadastrar(nome, email, senha);
+              }}
+              type="submit"
+            >
+              CADASTRAR
+            </button>
           </form>
         </div>
       </div>

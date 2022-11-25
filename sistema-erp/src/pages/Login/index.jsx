@@ -62,7 +62,7 @@ export const Login = () => {
           <form className="form" action="">
             <input type="text" name="nome" id="nome" placeholder="Nome" />
             <input type="text" name="email" id="email" placeholder="E-mail" />
-            <input type="text" name="senha" id="senha" placeholder="Senha" />
+            <input type="password" name="senha" id="senha" placeholder="Senha" />
 
             <Link to={"/dashboard"}>
               <button type="submit">CADASTRAR</button>

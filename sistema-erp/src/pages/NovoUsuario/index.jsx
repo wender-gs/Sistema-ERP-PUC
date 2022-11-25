@@ -10,23 +10,22 @@
 import "./index.css";
 import React from "react";
 import { useEffect } from "react";
-import { FormLogin } from "../../component/FormLogin"
+import { Content } from "../../component/Content";
+import { FormCadastrar } from "../../component/FormCadastrar"
 
-export const Login = () => {
+export const NovoUsuario = () => {
   useEffect(() => {
-    document.title = "Login";
+    document.title = "NovoUsuario";
   }, []);
 
   return (
-    <div className="centralizar-conteudo">
-      <div>
-        <div className="btn-register mt-3">
-          <h3 style={{ "marginBottom": "5px" }}>login</h3>
+      <div className="centralizar-conteudo">
+        <div>
+          <div className="btn-register mt-3">
+            <h3 style={{ "marginBottom": "5px" }}>cadastrar</h3>
+          </div>
+          <FormCadastrar />
         </div>
-        <FormLogin/>
       </div>
-      <div style={{ "marginTop": "10px" }} className="btn-register mt-3">
-      </div>
-    </div>
   );
 };

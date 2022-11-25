@@ -12,6 +12,7 @@ import { CadastroFinanceiroCompras } from "./pages/CadastroFinanceiroCompras";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
 import { CadastroInsumos } from "./pages/CadastroInsumos";
 import { CadastroFinanceiroDespesas } from "./pages/CadastroFinanceiroDespesas";
+import { NovoUsuario } from "./pages/NovoUsuario";
 
 export const App = () => {
   const valor = useContext(DisplayContext);
@@ -66,6 +67,11 @@ export const App = () => {
       _id: 10,
       path: "/financeiro/despesas/cadastro",
       element: <CadastroFinanceiroDespesas />,
+    },
+    {
+      _id: 11,
+      path: "/NovoUsuario",
+      element: <NovoUsuario />,
     },
   ];
 

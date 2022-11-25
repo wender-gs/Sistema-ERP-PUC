@@ -1,0 +1,12 @@
+
+.btn-register {
+  text-align: center;
+}
+
+.btn-register button {
+  background: #6ff18b;
+}
+
+.btn-register button:hover {
+  background: #6ff18b;
+}

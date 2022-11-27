@@ -1,16 +1,16 @@
-body {
-  background-color: #fff;
+.grid-login {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: "1 2 3 4 5 6 7 8 9 10 11 12";
 }
 
 .left-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 22rem;
+  grid-column: 1 / span 12;
+  grid-row: 1;
+
+  text-align: center;
   background: #6ff18b;
+  padding-bottom: 4rem;
 }
 
 .left-item .btn-login {
@@ -22,42 +22,21 @@ body {
   border-radius: 3rem;
 }
 
-.left-item .btn-login:hover {
-  background: #fff;
-  color: #6ff18b;
-  transition: all 256ms ease-in;
-}
-
 .right-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 23rem;
-  width: 100%;
-}
+  grid-column: 1 / span 12;
+  grid-row: 2;
 
-.right-item .content div:nth-child(1) p {
-  color: #6ff18b;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-
-.content {
-  padding: 2rem 5rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .form input {
   border: none;
   height: 3.4rem;
-  width: 78%;
   border-radius: 2rem;
   margin-bottom: 1.5rem;
   padding-left: 2.5rem;
+  width: 90%;
 }
 
 .form input:focus {
@@ -65,18 +44,17 @@ body {
 }
 
 .form input:nth-child(1) {
-  background: #f1f1f1 url("/public/images/username.svg") no-repeat left center;
+  background: #ccc url("/public/images/username.svg") no-repeat left center;
   background-position-x: 15px;
   margin-top: 2rem;
 }
 .form input:nth-child(2) {
-  background: #f1f1f1 url("/public/images/Email\ Icon.svg") no-repeat left
-    center;
+  background: #ccc url("/public/images/Email\ Icon.svg") no-repeat left center;
   background-position-x: 15px;
   margin-top: 2rem;
 }
 .form input:nth-child(3) {
-  background: #f1f1f1 url("/public/images/Lock\ Icon.svg") no-repeat left center;
+  background: #ccc url("/public/images/Lock\ Icon.svg") no-repeat left center;
   background-position-x: 15px;
   margin-top: 2rem;
 }
@@ -94,4 +72,24 @@ body {
 .form button:hover {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   transition: box-shadow 200ms ease-in-out;
+}
+
+@media (min-width: 1020px) {
+  .left-item {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: fixed;
+    top: 0;
+    width: 20rem;
+    height: 100%;
+  }
+
+  .right-item {
+    grid-column: 5 / span 7;
+  }
+
+  .teste {
+    display: none;
+  }
 }

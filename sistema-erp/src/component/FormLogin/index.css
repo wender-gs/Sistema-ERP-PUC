@@ -2,6 +2,8 @@ form#login input {
   background: #f1f1f1;
   border: none;
   height: 3.4rem;
+  width: 90%;
+  margin-inline: auto;
   border-radius: 2rem;
   margin-bottom: 1.5rem;
   padding-left: 2.5rem;

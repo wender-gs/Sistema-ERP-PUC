@@ -1,12 +1,14 @@
 import "./index.css";
 import React from "react";
 import { useEffect, useState } from "react";
-import { cadastrar } from "../../services/cadastrar";
+import { FormLogin } from "../../component/FormLogin";
+import { Authentication } from "../../services/cadastrar";
 
 export const Login = () => {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const Auth = new Authentication();
   const [formLogin, setFormLogin] = useState(false);
 
   useEffect(() => {
@@ -14,57 +16,52 @@ export const Login = () => {
   }, []);
 
   return (
-    <div className="d-flex">
-      <div className="left-item text-center">
-        <div className="mt-5">
-          <p className="fw-bold fs-3 text-white">LOGO</p>
+    <>
+      <div className="grid-login">
+        <div className="left-item">
+          <div className="mt-5">
+            <p className="fw-bold fs-3 text-white">LOGO</p>
+          </div>
+          {formLogin ? (
+            <FormLogin />
+          ) : (
+            <>
+              <div className="mt-5">
+                <p className="fw-bold fs-4 mt-5 text-white">
+                  Bem-Vindo de volta!
+                </p>
+              </div>
+              <div className="mt-5">
+                <p className="fw-bold text-white">
+                  Acesse sua conta agora mesmo.
+                </p>
+              </div>
+              <div className="mt-5">
+                <button
+                  className="btn-login"
+                  onClick={() => {
+                    setFormLogin(!formLogin);
+                  }}
+                >
+                  Entrar
+                </button>
+              </div>
+            </>
+          )}
         </div>
-        {formLogin ? (
-          <formLogin />
-        ) : (
-          <>
-            <div className="mt-5 w-50">
-              <p className="fw-bold fs-4 mt-5 text-white">
-                Bem-Vindo de volta!
-              </p>
-            </div>
-            <div className="mt-5 w-75">
-              <p className="fw-bold text-white">
-                Acesse sua conta agora mesmo.
-              </p>
-            </div>
-            <div className="mt-5">
-              <button
-                className="btn-login"
-                onClick={() => {
-                  setFormLogin(!formLogin);
-                }}
-              >
-                Entrar
-              </button>
-            </div>
-            <div className="mt-5">
-              <a href="/" className="fw-bold text-white text-decoration-none">
-                Esqueci minha senha.
-              </a>
-            </div>
-          </>
-        )}
-      </div>
-
-      <div className="right-item">
-        <div className="content">
-          <div className="mt-5 text-center">
+        <div className="right-item">
+          <div className="mt-5">
             <p className="fw-bold fs-2">Crie um cadastro</p>
           </div>
-          <div className="mt-5 w-50 ms-5">
-            <p className="fw-bold text-secondary ms-5">
+          <div className="mt-5 ">
+            <p className="fw-bold text-secondary">
               Digite seus dados para criar um cadastro
             </p>
           </div>
           <form className="form" action="">
             <input
               type="text"
+              autoComplete="off"
               value={nome}
               onChange={(event) => {
                 setNome(event.target.value);
@@ -75,6 +72,7 @@ export const Login = () => {
             />
             <input
               type="text"
+              autoComplete="off"
               value={email}
               onChange={(event) => {
                 setEmail(event.target.value);
@@ -85,6 +83,7 @@ export const Login = () => {
             />
             <input
               type="password"
+              autoComplete="off"
               value={senha}
               onChange={(event) => {
                 setSenha(event.target.value);
@@ -96,7 +95,7 @@ export const Login = () => {
 
             <button
               onClick={() => {
-                cadastrar(nome, email, senha);
+                Auth.cadastrar(nome, email, senha);
               }}
               type="submit"
             >
@@ -105,6 +104,6 @@ export const Login = () => {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };

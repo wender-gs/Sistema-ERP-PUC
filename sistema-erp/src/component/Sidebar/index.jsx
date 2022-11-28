@@ -12,101 +12,84 @@ export const Sidebar = ({
 
   return (
     <>
-      <header>
-        <div className="d-flex ms-3 align-items-center">
-          <input type="checkbox" id="check" />
-          <label
-            id="icone"
-            htmlFor="check"
-            className={`${display && "d-none"}`}
-            onClick={() => {
-              setdisplayTrueorFalse(!displayTrueorFalse);
-            }}
-          ></label>
-          <h1
-            className={`${
-              display ? "ml mt-4" : "mt-2 ps-3 text-capitalize d-inline-block"
-            }`}
-          >
-            {title}
-          </h1>
-          <div
-            className={`${
-              page === "dash"
-                ? "d-none"
-                : "user-icon w-100 d-flex justify-content-end pe-3 mt-4"
-            }`}
-          >
-            <img
-              className="bg-white rounded-circle p-2"
-              src="/images/user-icon.svg"
-              alt=""
-            />
-          </div>
-          <div className={`barra ${display && "block"}`}>
-            <nav>
-              <ul className="nav-menu">
-                <li className="logo">
-                  <span className="fs-2">LOGO </span>
-                </li>
-
-                <li
-                  className={`${
-                    pathname === "/dashboard" ? "active disabled_link" : ""
-                  }`}
-                >
-                  <Link
-                    to="/dashboard"
-                    onClick={() =>
-                      displayTrueorFalse === true
-                        ? setdisplayTrueorFalse(false)
-                        : setdisplayTrueorFalse(false)
-                    }
-                  >
-                    Dashboard
-                  </Link>
-                </li>
-
-                <li
-                  className={`${
-                    pathname === "/displayfinanceirocompras" ||
-                    pathname === "/financeiro/compras/cadastro" ||
-                    pathname === "/displayfinanceirodespesas" ||
-                    pathname === "/financeiro/despesas/cadastro"
-                      ? "active disabled_link"
-                      : ""
-                  }`}
-                >
-                  <Link to="/displayfinanceirocompras">Financeiro</Link>
-                </li>
-                <li
-                  className={`${
-                    pathname === "/displayprodutos" ||
-                    pathname === "/produtos/cadastro"
-                      ? "active disabled_link"
-                      : ""
-                  }`}
-                >
-                  <Link to="/displayprodutos">Produtos</Link>
-                </li>
-                <li
-                  className={`${
-                    pathname === "/displayinsumos" ||
-                    pathname === "/insumos/cadastro"
-                      ? "active disabled_link"
-                      : ""
-                  }`}
-                >
-                  <Link to="/displayinsumos">Insumos</Link>
-                </li>
-                <li>
-                  <Link to="/">Sair</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+      <div className="sidebar">
+        <span
+          className="icone me-3"
+          onClick={() => {
+            document
+              .querySelector(".icone")
+              .classList.toggle("bg-icon-transform");
+            document.querySelector(".barra").classList.toggle("transform");
+            setdisplayTrueorFalse(!displayTrueorFalse);
+          }}
+        ></span>
+        <h1 className={`text-capitalize d-inline`}>{title}</h1>
+        <div className="user-icon">
+          <img src="/images/user-icon.svg" width={40} alt="" />
         </div>
-      </header>
+      </div>
+      <div className={`barra`}>
+        <nav>
+          <ul className="nav-menu">
+            <li className="logo">
+              <span className="fs-2">LOGO</span>
+            </li>
+
+            <li
+              className={`${
+                pathname === "/dashboard" ? "active disabled_link" : ""
+              }`}
+            >
+              <Link
+                to="/dashboard"
+                onClick={() =>
+                  displayTrueorFalse === true
+                    ? setdisplayTrueorFalse(false)
+                    : setdisplayTrueorFalse(false)
+                }
+              >
+                Dashboard
+              </Link>
+            </li>
+
+            <li
+              className={`${
+                pathname === "/displayfinanceirocompras" ||
+                pathname === "/financeiro/compras/cadastro" ||
+                pathname === "/displayfinanceirodespesas" ||
+                pathname === "/financeiro/despesas/cadastro"
+                  ? "active disabled_link"
+                  : ""
+              }`}
+            >
+              <Link to="/displayfinanceirocompras">Financeiro</Link>
+            </li>
+            <li
+              className={`${
+                pathname === "/displayprodutos" ||
+                pathname === "/produtos/cadastro"
+                  ? "active disabled_link"
+                  : ""
+              }`}
+            >
+              <Link to="/displayprodutos">Produtos</Link>
+            </li>
+            <li
+              className={`${
+                pathname === "/displayinsumos" ||
+                pathname === "/insumos/cadastro"
+                  ? "active disabled_link"
+                  : ""
+              }`}
+            >
+              <Link to="/displayinsumos">Insumos</Link>
+            </li>
+            <li>
+              <Link to="/">Sair</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </>
   );
 };

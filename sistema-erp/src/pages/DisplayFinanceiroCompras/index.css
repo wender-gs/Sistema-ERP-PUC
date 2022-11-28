@@ -18,14 +18,14 @@ h5 {
   --bs-btn-hover-border-color: var(--clr-light-green);
 }
 
-.grid-item:nth-child(1) {
+.grid-content .grid-item:nth-child(1) {
   grid-column: 1 / span 11;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.grid-item:nth-child(1) a.new {
+.grid-content .grid-item:nth-child(1) a.new {
   border: none;
   background: var(--clr-white);
   color: var(--clr-black);
@@ -34,7 +34,7 @@ h5 {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
-.grid-item:nth-child(2) {
+.grid-content .grid-item:nth-child(2) {
   grid-column: 5 / span 7;
   grid-row: 2;
 }

@@ -1,28 +1,17 @@
-/* 
-  CSS do component sidebar
-*/
-.bg-success {
-  background: var(--clr-light-green) !important;
+header {
+  position: sticky;
+  top: 0;
 }
 
-#check {
-  display: none;
-}
-
-#icone {
-  cursor: pointer;
-  background: var(--clr-light-green) url("/public/images/menu1.svg") no-repeat
-    center;
-  transition: background 120ms steps(1) ease;
-  padding: 1.5rem;
-  margin: 0.5rem 1.5rem 0 0;
-  border-radius: 50%;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  transition: all 256ms ease-in-out;
-}
-
-.disabled_link {
-  pointer-events: none;
+.sidebar {
+  background: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.7rem 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 .barra {
@@ -30,9 +19,37 @@
   height: 100%;
   width: 15rem;
   position: fixed;
-  top: 0;
+  top: 4.4rem;
   transition: all 0.256s linear;
   left: -15rem;
+}
+
+.transform {
+  transform: translateX(15rem);
+}
+
+.icone {
+  display: inline-block;
+  cursor: pointer;
+  background: var(--clr-light-green) url("/public/images/menu1.svg") no-repeat
+    center;
+  padding: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  transition: all 256ms ease-in-out;
+}
+
+.bg-icon-transform {
+  background: var(--clr-light-green) url("/public/images/menu2.svg") no-repeat
+    center;
+}
+.user-icon {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.disabled_link {
+  pointer-events: none;
 }
 
 li {
@@ -40,11 +57,6 @@ li {
   transition: all 0.2s linear;
   color: var(--clr-white);
 }
-
-/* 
-  1rem = 16px
-  15.625rem = 250px
-*/
 
 li a,
 li span {
@@ -65,27 +77,26 @@ li a:hover {
   background-color: var(--clr-light-green);
 }
 
-.block {
-  transform: translateX(15rem);
-}
-
-.ml {
-  margin-left: 15rem !important;
-}
-
-#check:checked ~ .barra {
-  transform: translateX(15rem);
-}
-
-#check:checked ~ #icone {
-  background-image: url("/public/images/menu2.svg");
-}
-
-#check:checked ~ #icone {
-  margin-left: 15rem;
-  transition: all 256ms ease-in-out;
-}
-
 .active {
   background-color: var(--clr-light-green);
+}
+
+@media (min-width: 56.25rem) {
+  .sidebar {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .ml {
+    margin-left: 16rem !important;
+    transition: margin 256ms ease-in-out;
+  }
+
+  .barra {
+    top: 0;
+  }
+
+  .user-icon {
+    display: none;
+  }
 }

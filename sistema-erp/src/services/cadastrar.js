@@ -9,12 +9,17 @@ export class Authentication {
   };
 
   login(user, pass, setErrorMessage) {
-    const getUsr = JSON.parse(localStorage.getItem("usuario"));
+    try {
+      const getUsr = JSON.parse(localStorage.getItem("usuario"));
 
-    if (user === getUsr.email && pass === getUsr.senha) {
-      window.location.href = "/dashboard";
+      if (user === getUsr.email && pass === getUsr.senha) {
+        window.location.href = "/dashboard";
+        return;
+      }
+
+      setErrorMessage(true);
+    } catch (error) {
+      setErrorMessage(true);
     }
-
-    setErrorMessage(true);
   }
 }

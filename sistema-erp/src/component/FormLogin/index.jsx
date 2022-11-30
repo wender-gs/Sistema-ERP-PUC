@@ -19,7 +19,7 @@ export const FormLogin = () => {
             type="text"
             name="usuario"
             id="usuario"
-            placeholder="Usuário"
+            placeholder="Email"
             value={user}
             onChange={(event) => {
               setUser(event.target.value);

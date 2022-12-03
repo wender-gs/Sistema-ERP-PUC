@@ -18,7 +18,7 @@ export const Dashboard = () => {
           <Sidebar
             title={"Dashboard"}
             page="dash"
-            display={false}
+            display={""}
             setdisplayTrueorFalse={setdisplayTrueorFalse}
             displayTrueorFalse={displayTrueorFalse}
           />

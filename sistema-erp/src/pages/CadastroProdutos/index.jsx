@@ -7,7 +7,7 @@ import "./index.css";
 export const CadastroProdutos = () => {
   return (
     <>
-      <Sidebar title={"Produtos"} display={true} />
+      <Sidebar title={"Produtos"} />
 
       <Content>
         <div className="grid-item">

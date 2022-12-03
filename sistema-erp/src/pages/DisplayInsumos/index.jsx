@@ -27,18 +27,18 @@ export const DisplayInsumos = () => {
     <>
       {/* menu */}
       <div>
-        <Sidebar title={"Insumos"} display={true} />
+        <Sidebar title={"Insumos"} />
 
         {/* cont-principal*/}
         <Content>
           <div className="grid-item">
-          <div className="d-flex align-items-center justify-content-end w-100">
+            <div className="d-flex align-items-center justify-content-end w-100">
               <Link to="/insumos/cadastro" className="new">
                 <img src="/images/plus.svg" alt="" />
               </Link>
             </div>
-            </div>
-            <div className="grid-item">
+          </div>
+          <div className="grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Insumos</p>
             <Table dataHeader={tableHeaders} dataValues={dataValues} />
           </div>

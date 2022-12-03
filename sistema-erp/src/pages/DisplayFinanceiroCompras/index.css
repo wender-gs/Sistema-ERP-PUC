@@ -18,7 +18,7 @@ h5 {
   --bs-btn-hover-border-color: var(--clr-light-green);
 }
 
-.grid-content .grid-item:nth-child(1) {
+/* .grid-content .grid-item:nth-child(1) {
   grid-column: 1 / span 11;
   display: flex;
   align-items: center;
@@ -37,6 +37,17 @@ h5 {
 .grid-content .grid-item:nth-child(2) {
   grid-column: 5 / span 7;
   grid-row: 2;
+} */
+
+.grid-content .financeiro.grid-item:nth-child(1) {
+  grid-column: 1 / span 12;
+  margin-inline: 1rem;
+}
+
+.grid-content .financeiro.grid-item:nth-child(2) {
+  grid-column: 1 / span 12;
+  margin-top: 3rem;
+  margin-inline: 1rem;
 }
 
 .drop-despesa:hover {
@@ -56,4 +67,23 @@ h5 {
   padding: 1rem 4.5rem;
   border-radius: 0.3rem;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 56.25rem) {
+  .grid-content {
+    margin-left: 17rem;
+  }
+
+  .grid-content .financeiro.grid-item:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 18rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
 }

@@ -16,7 +16,7 @@ import "./index.css";
 export const CadastroFinanceiroDespesas = () => {
   return (
     <>
-      <Sidebar title={"Financeiro/Despesas"} display={true} />
+      <Sidebar title={"Financeiro/Despesas"} />
 
       <Content>
         <div className="grid-item">

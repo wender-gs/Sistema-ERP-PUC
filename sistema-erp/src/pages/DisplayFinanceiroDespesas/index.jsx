@@ -51,7 +51,7 @@ export const DisplayFinanceiroDespesas = () => {
     <>
       {/* menu */}
       <div>
-        <Sidebar title={"Financeiro/Despesas"} display={true} />
+        <Sidebar title={"Financeiro/Despesas"} />
         {/* cont-principal*/}
         <Content>
           <div className="grid-item">

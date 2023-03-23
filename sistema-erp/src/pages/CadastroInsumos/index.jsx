@@ -16,7 +16,7 @@ import { Sidebar } from "../../component/Sidebar";
 export const CadastroInsumos = () => {
   return (
     <>
-      <Sidebar title={"Insumos"} display={true} />
+      <Sidebar title={"Insumos"} />
 
       <Content>
         <div className="grid-item">

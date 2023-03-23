@@ -42,7 +42,7 @@ export const DisplayFinanceiroCompras = () => {
 
         {/* cont-principal*/}
         <Content>
-          <div className="grid-item">
+          <div className="financeiro grid-item">
             <div className="card ">
               <div className="card-body d-flex align-items-center justify-content-between">
                 <h5 className="card-title me-4 pe-1">Compras</h5>
@@ -68,7 +68,8 @@ export const DisplayFinanceiroCompras = () => {
               <img src="/images/plus.svg" alt="" />
             </Link>
           </div>
-          <div className="grid-item">
+
+          <div className="financeiro grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Compras</p>
             <Table dataHeader={tableHeaders} dataValues={tableValues} />
           </div>

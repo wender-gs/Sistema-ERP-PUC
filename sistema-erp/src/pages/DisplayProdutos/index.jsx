@@ -46,14 +46,14 @@ export const DisplayProdutos = () => {
         <Sidebar title={"Produtos"} display={true} />
         {/* cont-principal*/}
         <Content>
-          <div className="grid-item">
+          <div className="financeiro grid-item">
             <div className="d-flex align-items-center justify-content-end w-100">
               <Link to="/produtos/cadastro" className="new">
                 <img src="/images/plus.svg" alt="" />
               </Link>
             </div>
           </div>
-          <div className="grid-item">
+          <div className="financeiro grid-item">
             <p className="fw-bold fs-5 text-center mb-5">Lista de Produtos</p>
             <Table dataHeader={tableHeaders} dataValues={dataValues} />
           </div>

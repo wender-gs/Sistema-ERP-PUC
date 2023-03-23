@@ -28,7 +28,7 @@ export const Sidebar = ({
           <img src="/images/user-icon.svg" width={40} alt="" />
         </div>
       </div>
-      <div className={`barra`}>
+      <div className={`barra ${display && "transform"}`}>
         <nav>
           <ul className="nav-menu">
             <li className="logo">

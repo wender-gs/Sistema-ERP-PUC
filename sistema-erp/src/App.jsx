@@ -10,6 +10,7 @@ import { CadastroFinanceiroCompras } from "./pages/CadastroFinanceiroCompras";
 import { CadastroProdutos } from "./pages/CadastroProdutos";
 import { CadastroInsumos } from "./pages/CadastroInsumos";
 import { CadastroFinanceiroDespesas } from "./pages/CadastroFinanceiroDespesas";
+import { NaoEncontrada } from "./pages/NaoEncontrada";
 
 export const App = () => {
   const routes = [
@@ -62,6 +63,11 @@ export const App = () => {
       _id: 10,
       path: "/financeiro/despesas/cadastro",
       element: <CadastroFinanceiroDespesas />,
+    },
+    {
+      _id: 11,
+      path: "*",
+      element: <NaoEncontrada />,
     },
   ];
 

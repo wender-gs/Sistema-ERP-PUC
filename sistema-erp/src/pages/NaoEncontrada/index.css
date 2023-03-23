@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+
+  left: 25rem;
+  top: 20rem;
+}
+
+.text {
+  position: absolute;
+  border: 1rem solid yellowgreen;
+  border-radius: 2rem;
+  background-color: yellowgreen;
+}
